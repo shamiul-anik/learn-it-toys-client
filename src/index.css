@@ -124,8 +124,7 @@
 }
 
 /* Banner Description */
-.banner-description,
-.footer-description {
+.banner-description {
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
@@ -142,6 +141,16 @@
 .custom-border {
   border: 5px solid;
   border-image-source: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+}
+
+/* Custom Text Color */
+.custom-text {
+  text-align: justify;
+  background: linear-gradient(117.42deg, #AD91FD -8.66%, #B6EBFE 89.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 /* Content Title */

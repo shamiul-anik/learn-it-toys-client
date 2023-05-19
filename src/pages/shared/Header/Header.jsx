@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import Logo from '../../../assets/images/logo.png';
+import BrandCharacter from '../../../assets/images/brand_name_character.png';
 import './Header.css';
 
 const Header = () => {
@@ -64,7 +65,7 @@ const Header = () => {
 									<li>
 										{/* <Link to="/login" className="primary-button-sm justify-center">Login</Link> */}
 										<Link className='p-0' to="/login">
-											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Login</button>
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Login</button>
 										</Link>
 									</li>
 								)
@@ -73,7 +74,7 @@ const Header = () => {
 					</div>
 					<Link to="/" className="flex gap-2 items-center btn px-0 btn-ghost normal-case font-extrabold text-2xl lg:text-3xl text-slate-700 hover:bg-inherit">
 						<img className="h-10 w-10 rounded-full" src={Logo} alt="Logo" />
-						<span className='banner-highlighted-text'>LearnitToys</span>
+						<span className='flex items-center banner-highlighted-text'>LearnitT <img className="h-5 w-5 rounded-full" src={BrandCharacter} alt="o" /> ys</span>
 					</Link>
 				</div>
 
@@ -101,7 +102,7 @@ const Header = () => {
 									<li>
 										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}
 										<Link className='p-0' onClick={handleLogOut}>
-											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
 										</Link>
 									</li>
 								</ul>
@@ -143,7 +144,7 @@ const Header = () => {
 								<li>
 									{/* <Link to="/login" className="primary-button-md">Login</Link> */}
 									<Link to="/login">
-										<button type="button" className="flex gap-3 mx-auto md:mx-0 items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-lg px-8 py-2 text-center">Login</button>
+										<button type="button" className="flex gap-3 mx-auto md:mx-0 items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-lg px-8 py-2 text-center">Login</button>
 									</Link>
 								</li>
 							)
@@ -173,7 +174,7 @@ const Header = () => {
 									<li>
 										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}
 										<Link className='p-0' onClick={handleLogOut}>
-											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
 										</Link>
 									</li>
 								</ul>
