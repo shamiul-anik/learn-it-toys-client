@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
+import { useTitle } from '../../hooks/useTitle';
 import HomeBanner from './HomeBanner';
 import Newsletter from './Newsletter';
 import LatestToys from './LatestToys';
-// import { useTitle } from '../../hooks/useTitle';
 import TrendingToys from './TrendingToys';
 import Gallary from './Gallary';
-// import Categories from './Categories';
 
 const Home = () => {
   
-  // useTitle("Home");
+  useTitle("Home");
 
   // const toysLoadedData = useLoaderData();
   // const [toyDetails, setToyDetails] = useState([]);
@@ -33,8 +32,7 @@ const Home = () => {
       {/* Trending Toys */}
       <TrendingToys></TrendingToys>
 
-      {/* Categories */}
-      {/* <Categories></Categories> */}
+      {/* Discount */}
       
 
       {/* Subscribe to Our Newsletter */}
