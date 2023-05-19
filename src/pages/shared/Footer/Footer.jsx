@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../../assets/images/logo.png';
 import BrandCharacter from '../../../assets/images/brand_name_character.png';
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { BiCurrentLocation } from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -39,8 +41,18 @@ const Footer = () => {
         <div>
           <span className="footer-title text-lg">Support</span>
           <p className='mb-2 text-slate-300'>Contact us via phone or email</p>
-          <p className='font-normal'>Email: info@learnittoys.com</p>
-          <p className='font-normal'>Phone: +1 777-978-5570</p>
+          <p className='flex gap-2 items-center font-normal'>
+            <BiCurrentLocation className='text-lg text-slate-100'></BiCurrentLocation>
+            <span className='text-slate-300'>1-A, Dhaka, Bangladesh</span>
+          </p>
+          <p className='flex gap-2 items-center font-normal'>
+            <AiOutlineMail className='text-lg text-slate-100'></AiOutlineMail>
+            <span className='text-slate-300'>info@learnittoys.com</span>
+          </p>
+          <p className='flex gap-2 items-center font-normal'>
+            <AiOutlinePhone className='text-lg text-slate-100'></AiOutlinePhone>
+            <span className='text-slate-300'>+1 777-978-5570</span>
+          </p>
         </div>
       </div>
       <div className="text-sm lg:text-base mx-auto mt-8 py-6 border-t border-slate-500 flex flex-col gap-2 justify-center items-center">

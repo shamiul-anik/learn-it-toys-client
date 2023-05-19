@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { updateProfile } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { useTitle } from '../../../hooks/useTitle';
 import UserImage from '../../../assets/images/user.png'
@@ -60,7 +60,7 @@ const Profile = () => {
           <img className='rounded-full aspect-square object-cover object-top' src={currentUserPhotoURL ? currentUserPhotoURL : UserImage} alt={currentUserName} />
         </div>
         <div className="flex-1 mt-2">
-          <h4 className='text-slate-700 text-2xl my-2 font-bold text-center'>{currentUserName}</h4>
+          <h4 className='text-slate-700 text-2xl my-2 font-bold text-center'>{currentUserName ? currentUserName : "Welcome, User!"}</h4>
           <p className='text-slate-600 text-md mt-2 mb-3 font-medium text-center'>{currentUserEmail}</p>
         </div>
 
@@ -82,7 +82,7 @@ const Profile = () => {
               <label className="label pl-0" htmlFor="photoURL">
                 <span className="label-text text-lg">Photo URL</span>
               </label>
-              <input type="text" id="photoURL" name="photoURL" placeholder="Enter your photo url" className="input input-bordered read-only:bg-slate-100" defaultValue={currentUserPhotoURL} />
+              <input type="text" id="photoURL" name="photoURL" placeholder="Enter your photo url" className="input input-bordered read-only:bg-slate-100" defaultValue={currentUserPhotoURL ? currentUserPhotoURL : ""} />
               <p className="text-red-500 mt-2"></p>
             </div>
             <div className="form-control mt-4">
