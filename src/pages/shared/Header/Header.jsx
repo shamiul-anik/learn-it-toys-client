@@ -4,6 +4,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
 import Logo from '../../../assets/images/logo.png';
 import BrandCharacter from '../../../assets/images/brand_name_character.png';
+import UserImage from '../../../assets/images/user.png'
 import './Header.css';
 
 const Header = () => {
@@ -18,7 +19,8 @@ const Header = () => {
 	// }
 
 	const currentUserName = user?.displayName || "Welcome, User!";
-	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
+	const currentUserPhotoURL = user?.photoURL || UserImage;
+	const currentUserEmail = user?.email;
 
 	// console.log("Name from Header: ", currentUserName);
 	console.log("Photo URL from Header: ", currentUserPhotoURL);
@@ -88,7 +90,7 @@ const Header = () => {
 						<div className="navbar-end w-auto mr-1 md:hidden">
 							<div className="dropdown dropdown-end mt-1">
 								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
-									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
+									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-blue-400">
 										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
 									</div>
 								</label>
@@ -98,7 +100,10 @@ const Header = () => {
 											<img className='h-16 w-full rounded-full object-cover object-center' src={currentUserPhotoURL} alt={currentUserName} />
 										</div>
 									</div>
-									<li className='mt-1 text-center'>{currentUserName}</li>
+									<li className='mt-1 text-center font-bold'>
+										{currentUserName}
+									</li>
+									<p className='text-slate-600 text-sm mt-1 mb-2 font-normal text-center'>{currentUserEmail}</p>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
 										{/* <Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link> */}
@@ -163,7 +168,7 @@ const Header = () => {
 						user && (
 							<div className="dropdown dropdown-end mt-1 ml-6">
 								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
-									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
+									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-blue-400">
 										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
 									</div>
 								</label>
@@ -173,7 +178,10 @@ const Header = () => {
 											<img className='h-16 w-full rounded-full object-cover object-center' src={currentUserPhotoURL} alt={currentUserName} />
 										</div>
 									</div>
-									<li className='mt-1 text-center'>{currentUserName}</li>
+									<li className='mt-1 text-center font-bold'>
+										{currentUserName}
+									</li>
+									<p className='text-slate-600 text-sm mt-1 mb-2 font-normal text-center'>{currentUserEmail}</p>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
 										{/* <Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link> */}
