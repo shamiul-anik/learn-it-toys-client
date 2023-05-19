@@ -102,7 +102,15 @@
   font-weight: 800;
   font-size: 64px;
   line-height: 80px;
-  color: #4d4747;
+  color: #fff;
+}
+
+.banner-highlighted-text {
+  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .highlighted-text {
@@ -117,8 +125,19 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 30px;
-  color: #757575;
+  /* color: #757575; */
   text-align: justify;
+  background: linear-gradient(117.42deg, #AD91FD -8.66%, #B6EBFE 89.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Custom Border */
+.custom-border {
+  border: 5px solid;
+  border-image-source: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
 }
 
 /* Content Title */

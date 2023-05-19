@@ -7,7 +7,7 @@ const Gallary = () => {
           <h2 className="content-title text-center">Gallary</h2>
         </header>
         <p className="content-description text-center mt-4">
-          Check some of the Popular Toys in LearnitToys.
+          Check out our Photo Gallary in LearnitToys.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           
