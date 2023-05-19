@@ -1,3 +1,231 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+/* ===== Scrollbar CSS Start ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #949ba2 #cbd1d6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #e3e6e8;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #cbd1d6;
+	background: linear-gradient(90deg, #bfc5ca 0%, #a2a8ac 61%, #949a9e 100%);
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #cbd1d6;
+	background: linear-gradient(90deg, #989da0 0%, #888e92 61%, #858b8f 100%);
+}
+/* ===== Scrollbar CSS End ===== */
+
+/* Custom Primary Button */
+/* Large */
+.primary-button-lg {
+  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
+  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  padding: 18px 28px;
+  transition: all 0.3s;
+}
+
+/* Medium */
+.primary-button-md {
+  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
+  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 24px;
+  transition: all 0.3s;
+}
+
+/* Small */
+.primary-button-sm {
+  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
+  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  transition: all 0.3s;
+}
+
+/* Primary and Secondary Button Hover */
+.primary-button-lg:hover,
+.primary-button-md:hover,
+.primary-button-sm:hover {
+  cursor: pointer;
+  background: linear-gradient(90deg, #6275ed 0%, #5567de 100%);
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+	padding-block: 14px;
+}
+
+/* Banner Title */
+.banner-title {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 80px;
+  color: #4d4747;
+}
+
+.highlighted-text {
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Banner Description */
+.banner-description {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #757575;
+  text-align: justify;
+}
+
+/* Content Title */
+.content-title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 66px;
+  color: #4d4747;
+}
+
+/* Content Description */
+.content-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #757575;
+}
+
+/* Custom Card Background */
+.custom-card-img-bg {
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.1) 0%, rgba(152, 115, 255, 0.1) 100%);
+}
+
+/* Custom Card Box Shadow */
+.custom-box-shadow {
+  box-shadow: 0 0 8px 3px rgba(0 0 0 / 0.1);
+  transition: all 0.3s;
+}
+
+.custom-box-shadow:hover {
+  box-shadow: 0 0 8px 6px rgba(0 0 0 / 0.1);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.box-shadow-custom {
+  box-shadow: 0 0 8px 3px rgba(0 0 0 / 0.1);
+}
+
+.navbar-box-shadow {
+	box-shadow: 0 0 8px 6px rgba(0 0 0 / 0.1);
+}
+
+/* Question Image */
+.question-img > img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Question Text */
+.question-text {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+  color: #2f2c2c;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Answer Text */
+.answer-container {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+/* Answer */
+.answer {
+  font-weight: 600;
+  font-size: 18px;
+  color: #046004;
+  text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+  /* Banner Title */
+  .banner-title {
+    font-size: 44px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  /* Banner Description */
+  .banner-description {
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  /* Content Title */
+  .content-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  /* Content Description */
+  .content-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Blog Image */
+  .question-img > img {
+    height: 200px;
+    object-position: right;
+  }
+}
