@@ -87,13 +87,6 @@ const Profile = () => {
           </div>
         </form>
         
-        {/* {
-          !user && 
-          <div className="p-6 md:p-8 !pb-8 pt-1 md:pt-2">
-            Go Back to <Link to="/login" className='link link-primary'>Login</Link>
-          </div>
-        } */}
-
       </div>
     </section>
   );
