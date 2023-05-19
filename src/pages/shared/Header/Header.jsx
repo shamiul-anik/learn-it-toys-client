@@ -2,8 +2,7 @@ import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
-import Logo from '../../../assets/images/ball.png';
-// import { TbChefHat } from "react-icons/tb";
+import Logo from '../../../assets/images/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -14,11 +13,6 @@ const Header = () => {
 
 	const currentUserName = user?.displayName || "Welcome, User!";
 	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
-
-	// Show Loader when Page is Loading
-	// if (loading) {
-	// 	return <Loader></Loader>;
-	// }
 
 
 	// console.log("Name from Header: ", currentUserName);
@@ -37,7 +31,6 @@ const Header = () => {
 	};
 
 	return (
-		// <div className="bg-blue-900 py-2">
 		<div className="bg-gradient-to-tr from-blue-900 to-[#0D0A25] py-2">
 			<nav className="navbar max-w-7xl mx-auto">
 				<div className="navbar-start w-auto">
@@ -79,7 +72,6 @@ const Header = () => {
 						</ul>
 					</div>
 					<Link to="/" className="flex gap-2 items-center btn px-0 btn-ghost normal-case font-extrabold text-2xl lg:text-3xl text-slate-700 hover:bg-inherit">
-						{/* <TbChefHat className='h-10 w-10' /> */}
 						<img className="h-10 w-10 rounded-full" src={Logo} alt="Logo" />
 						<span className='banner-highlighted-text'>LearnitToys</span>
 					</Link>
@@ -107,7 +99,10 @@ const Header = () => {
 										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
 									</li>
 									<li>
-										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
+										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}
+										<Link className='p-0' onClick={handleLogOut}>
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
+										</Link>
 									</li>
 								</ul>
 							</div>
@@ -143,24 +138,6 @@ const Header = () => {
 
 				<div className="navbar-end w-auto hidden lg:flex">
 					<ul className="flex items-center gap-10 text-xl font-semibold menu-horizontal px-1">
-						{/* <li className="nav-item hover:cursor-pointer">
-							<NavLink to="/">Home</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/all-toys">All Toys</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/my-toys">My Toys</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/add-toy">Add A Toy</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/blog">Blog</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/about">About</NavLink>
-						</li> */}
 						{
 							!user && (
 								<li>
@@ -194,7 +171,10 @@ const Header = () => {
 										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
 									</li>
 									<li>
-										<Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link>
+										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}
+										<Link className='p-0' onClick={handleLogOut}>
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Logout</button>
+										</Link>
 									</li>
 								</ul>
 							</div>
