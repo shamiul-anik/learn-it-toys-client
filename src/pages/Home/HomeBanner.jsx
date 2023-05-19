@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BannerImage from '../../assets/images/banner2.png';
+import BannerImage from '../../assets/images/banner.png';
 import { FaArrowRight } from 'react-icons/fa';
 
 const HomeBanner = () => {
   
   return (
     // <div className="bg-[#0D0A25] mt-1">
-    <div className="bg-gradient-to-br from-blue-900 to-[#0D0A25] mt-1">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-4 lg:py-12">
+    <div className="bg-gradient-to-br from-blue-900 to-[#0D0A25]">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-8 lg:py-12">
         <div className="max-w-xl p-4">
           <header>
             <h1 className="banner-title">Welcome to<span className="banner-highlighted-text"> LearnitToys!</span></h1>
@@ -20,7 +20,7 @@ const HomeBanner = () => {
           </Link>
         </div>
         <div className="p-4 pb-0">
-          <img className="max-w-xl image-full" src={BannerImage} alt="Banner Image" />
+          <img className="max-w-xl w-full image-full" src={BannerImage} alt="Banner Image" />
         </div>
       </div>
     </div>

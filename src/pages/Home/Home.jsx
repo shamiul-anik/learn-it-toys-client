@@ -4,7 +4,7 @@ import HomeBanner from './HomeBanner';
 import Newsletter from './Newsletter';
 import LatestToys from './LatestToys';
 import TrendingToys from './TrendingToys';
-import Gallary from './Gallary';
+import Gallery from './Gallery';
 
 const Home = () => {
   
@@ -23,8 +23,8 @@ const Home = () => {
     <div>
       <HomeBanner></HomeBanner>
 
-      {/* Gallary */}
-      <Gallary></Gallary>
+      {/* Gallery */}
+      <Gallery></Gallery>
       
       {/* Latest Toys */}
       <LatestToys></LatestToys>

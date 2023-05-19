@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './routes/Routes.jsx';
 import { ToastContainer, Zoom } from 'react-toastify';
-// import AuthProvider from './providers/AuthProvider.jsx';
+import AuthProvider from './providers/AuthProvider.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <AuthProvider> */}
+    <AuthProvider>
       <RouterProvider router={router}></RouterProvider>
-    {/* </AuthProvider> */}
+    </AuthProvider>
     {/* React Toastify */}
     <ToastContainer
       position="bottom-right"

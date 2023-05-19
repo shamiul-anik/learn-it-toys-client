@@ -1,10 +1,10 @@
 
-const Gallary = () => {
+const Gallery = () => {
   return (
     <div>
       <section className="max-w-7xl mx-auto mt-12 lg:mt-32 p-4">
         <header>
-          <h2 className="content-title text-center">Gallary</h2>
+          <h2 className="content-title text-center">Gallery</h2>
         </header>
         <p className="content-description text-center mt-4">
           Check out our Photo Gallary in LearnitToys.
@@ -61,4 +61,4 @@ const Gallary = () => {
   );
 };
 
-export default Gallary;
+export default Gallery;

@@ -9,7 +9,7 @@ const MainLayout = lazy(() => import("../layouts/MainLayout"));
 // const Blog = lazy(() => import("../pages/Blog/Blog"));
 const Home = lazy(() => import("../pages/Home/Home"));
 // const About = lazy(() => import("../pages/About/About"));
-// const RecipeDetails = lazy(() => import("../pages/RecipeDetails/RecipeDetails"));
+// const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
 // const PrivateRoute = lazy(() => import("./PrivateRoute"));
 // const PasswordReset = lazy(() => import("../pages/Authentication/PasswordReset/PasswordReset"));
 // const Profile = lazy(() => import("../pages/Authentication/Profile/Profile"));
