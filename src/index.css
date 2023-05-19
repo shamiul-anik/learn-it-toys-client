@@ -45,8 +45,8 @@
 /* Custom Primary Button */
 /* Large */
 .primary-button-lg {
-  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
-  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 20px;
@@ -58,8 +58,8 @@
 
 /* Medium */
 .primary-button-md {
-  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
-  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 18px;
@@ -72,8 +72,8 @@
 
 /* Small */
 .primary-button-sm {
-  /* background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%); */
-  background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%);
+  background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
+  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 16px;

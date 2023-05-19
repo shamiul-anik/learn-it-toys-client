@@ -66,6 +66,7 @@ function App() {
         </div>
       </div> */}
 
+
       {/* <section className="bg-white dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-sm">
@@ -138,6 +139,7 @@ function App() {
         </div>
       </section>
 
+      // Form
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
@@ -161,7 +163,7 @@ function App() {
       </section> 
 
 
-
+      // Hero
       <section className="bg-white dark:bg-gray-900">
         <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
           <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -176,7 +178,7 @@ function App() {
           </div>
       </section>
 
-
+      // Search
       <section className="bg-gray-50 dark:bg-gray-900 h-screen flex items-center">
         <div className="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
           <div className="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
@@ -269,7 +271,7 @@ function App() {
         </div>
       </section>
 
-      
+      // Accordion
       <Accordion className='max-w-7xl mx-auto my-16'>
         <Accordion.Panel>
           <Accordion.Title>
