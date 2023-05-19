@@ -1,14 +1,21 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import BannerImage from '../../assets/images/banner.png';
+import Sphere1 from '../../assets/images/sphere1.png';
+import Sphere2 from '../../assets/images/sphere1.png';
 import { FaArrowRight } from 'react-icons/fa';
 
 const HomeBanner = () => {
   
   return (
-    // <div className="bg-[#0D0A25] mt-1">
-    <div className="bg-gradient-to-br from-blue-900 to-[#0D0A25]">
+    <div className="relative bg-gradient-to-br from-blue-900 to-[#0D0A25]">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto py-8 lg:py-12">
+        
+        {/* Spheres */}
+        <img className="hidden md:block absolute top-4 left-3 blur-md" src={Sphere1} alt="Sphere 1" />
+        <img className="absolute w-[350px] -bottom-36 -left-40 blur-lg" src={Sphere2} alt="Sphere 2" />
+        <img className="hidden md:block absolute top-4 right-3 blur-lg" src={Sphere1} alt="Sphere 1" />
+        <img className="absolute bottom-6 right-10 blur-lg" src={Sphere2} alt="Sphere 2" />
+
         <div className="max-w-xl p-4">
           <header>
             <h1 className="banner-title">Welcome to<span className="banner-highlighted-text"> LearnitToys!</span></h1>

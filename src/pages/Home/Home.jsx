@@ -21,6 +21,8 @@ const Home = () => {
 
   return (
     <div>
+
+      {/* Home Page Banner */}
       <HomeBanner></HomeBanner>
 
       {/* Gallery */}

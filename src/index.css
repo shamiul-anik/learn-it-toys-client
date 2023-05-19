@@ -138,6 +138,15 @@
   text-fill-color: transparent;
 }
 
+/* Common Banner Description */
+.common-banner-description {
+  background: linear-gradient(117.42deg, #AD91FD -8.66%, #B6EBFE 89.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 /* Custom Border */
 .custom-border {
   border: 5px solid;

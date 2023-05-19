@@ -39,7 +39,7 @@ const Header = () => {
 
 	return (
 		<div className="bg-gradient-to-tr from-blue-900 to-[#0D0A25] py-2">
-			<nav className="navbar gap-4 justify-center max-w-7xl mx-auto">
+			<nav className={`navbar gap-4 ${user ? 'justify-center' : ''} max-w-7xl mx-auto`}>
 				<div className="navbar-start w-auto">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost text-slate-100 lg:hidden">
@@ -65,15 +65,17 @@ const Header = () => {
 							<li className="hover:cursor-pointer">
 								<NavLink to="/contact">Contact</NavLink>
 							</li>
-							<div className="divider my-0"></div> 
 							{
 								!user && (
-									<li>
-										{/* <Link to="/login" className="primary-button-sm justify-center">Login</Link> */}
-										<Link className='p-0' to="/login">
-											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Login</button>
-										</Link>
-									</li>
+									<>
+										<div className="divider my-0"></div>
+										<li>
+											{/* <Link to="/login" className="primary-button-sm justify-center">Login</Link> */}
+											<Link className='p-0' to="/login">
+												<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Login</button>
+											</Link>
+										</li>
+									</>
 								)
 							}
 						</ul>

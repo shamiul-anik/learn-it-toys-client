@@ -1,8 +1,9 @@
-import ReactBanner from '../../assets/images/react-banner.png';
 import { useTitle } from '../../hooks/useTitle';
 import BlogPDF from './BlogPDF';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { FaFilePdf, FaSpinner } from 'react-icons/fa';
+import ReactBanner from '../../assets/images/react-banner.png';
+import BlogBanner from './BlogBanner';
 
 const Blog = () => {
 
@@ -10,12 +11,16 @@ const Blog = () => {
   
   return (
     <div>
+
+      {/* Blog Banner */}
+      <BlogBanner></BlogBanner>
+
       <div className="max-w-7xl mx-auto mt-12 lg:mt-20 p-4">
-        <header>
+        {/* <header>
           <h2 className="content-title text-center">React Q&A Blog</h2>
           <h3 className='text-blue-700 text-xl font-bold text-center mb-1'>A. K. M. Shamiul Islam</h3>
           <p className='text-slate-700 font-medium text-center'>May 20, 2023</p>
-        </header>
+        </header> */}
 
         <div className="text-center md:text-right mt-4">
           <PDFDownloadLink className='inline-flex items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center' document={<BlogPDF />} fileName="blog.pdf">
@@ -43,7 +48,9 @@ const Blog = () => {
               On the client-side, access tokens are usually stored in a safe place like cookies or the browser's local storage. These storage options make sure that the tokens are not easily accessible to others. It is important to store them securely to prevent unauthorized access.
             </div>
           </div>
-          
+
+          <div className="divider mt-8"></div>
+
           {/* Question-2 */}
           <div>
             <header className="question-text">
@@ -57,6 +64,8 @@ const Blog = () => {
             </div>
           </div>
           
+          <div className="divider mt-8"></div>
+
           {/* Question-3 */}
           <div>
             <header className="question-text">
@@ -70,6 +79,8 @@ const Blog = () => {
             </div>
           </div>
           
+          <div className="divider mt-8"></div>
+
           {/* Question-4 */}
           <div>
             <header className="question-text">

@@ -7,7 +7,7 @@ import { BiCurrentLocation } from "react-icons/bi";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-blue-900 to-[#0D0A25] text-slate-100 mt-8 lg:mt-32">
-      <div className="footer p-8 pb-4 md:pt-12 md:pb-8 max-w-7xl mx-auto grid gap:8 lg:gap-28 lg:grid-cols-4">
+      <div className="footer p-8 pb-4 md:pt-12 md:pb-8 max-w-7xl mx-auto grid gap:8 lg:gap-28 lg:grid-cols-5">
         <div className="col-span-2">
           <h3 className="flex gap-2 items-center text-3xl text-slate-50 font-bold">
             <img className="h-10 w-10 rounded-full" src={Logo} alt="Logo" />
@@ -16,10 +16,10 @@ const Footer = () => {
           <p className="text-justify mt-2 mb-2">
             Discover the Joy of Learning with LearnitToys!
           </p>
-          <p className='mb-2'>
+          {/* <p className='text-justify mb-2'>
             At LearnitToys, we believe that education should be fun and engaging. Our carefully curated selection of educational toys is designed to ignite curiosity, foster creativity, and inspire a love for learning in children of all ages.
-          </p>
-          <p className='mb-2'>
+          </p> */}
+          <p className='text-justify mb-2'>
             Explore our collection today and embark on a journey of endless discovery with LearnitToys - Where Learning Comes to Life!
           </p>
           <header>
@@ -31,25 +31,39 @@ const Footer = () => {
             <Link to="https://www.instagram.com" data-tip="Instagram" className="tooltip tooltip-bottom cursor-pointer transition duration-200 transform hover:-translate-y-2 border rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></Link>
           </div>
         </div>
-        <div className='col-span-2 md:col-span-1'>
+        {/* <div className=''>
           <span className="footer-title text-lg">Trending Toys</span>
           <Link className="link link-hover">Toy1</Link>
           <Link className="link link-hover">Toy2</Link>
           <Link className="link link-hover">Toy3</Link>
           <Link className="link link-hover">Toy4</Link>
+        </div> */}
+        <div className='col-span-1'>
+          <span className="footer-title text-lg">Company</span>
+          <Link className="link link-hover">About Us</Link>
+          <Link className="link link-hover">Work</Link>
+          <Link className="link link-hover">Latest News</Link>
+          <Link className="link link-hover">Careers</Link>
         </div>
-        <div>
+        <div className='col-span-1'>
           <span className="footer-title text-lg">Support</span>
-          <p className='mb-2 text-slate-300'>Contact us via phone or email</p>
+          <Link className="link link-hover">Help Desk</Link>
+          <Link className="link link-hover">Sales</Link>
+          <Link className="link link-hover">Become a Partner</Link>
+          <Link className="link link-hover">Developers</Link>
+        </div>
+        <div className='col-span-2'>
+          <span className="footer-title text-lg">CONTACT</span>
+          <p className='mb-2 text-slate-300'>Contact us via phone, email or visit us in our Head Office.</p>
           <p className='flex gap-2 items-center font-normal'>
             <BiCurrentLocation className='text-lg text-slate-100'></BiCurrentLocation>
             <span className='text-slate-300'>1-A, Dhaka, Bangladesh</span>
           </p>
-          <p className='flex gap-2 items-center font-normal'>
+          <p className='flex gap-2 items-center font-normal mt-1'>
             <AiOutlineMail className='text-lg text-slate-100'></AiOutlineMail>
             <span className='text-slate-300'>info@learnittoys.com</span>
           </p>
-          <p className='flex gap-2 items-center font-normal'>
+          <p className='flex gap-2 items-center font-normal mt-1'>
             <AiOutlinePhone className='text-lg text-slate-100'></AiOutlinePhone>
             <span className='text-slate-300'>+1 777-978-5570</span>
           </p>
