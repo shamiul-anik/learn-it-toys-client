@@ -12,12 +12,16 @@ const Header = () => {
 
 	const navigate = useNavigate();
 
+	// Show Loader when Page is Loading
+	// if (loading) {
+	// 	return <Loader></Loader>;
+	// }
+
 	const currentUserName = user?.displayName || "Welcome, User!";
 	const currentUserPhotoURL = user?.photoURL || "https://i.ibb.co/rwwW7Qw/user.png";
 
-
 	// console.log("Name from Header: ", currentUserName);
-	// console.log("Photo URL from Header: ", currentUserPhotoURL);
+	console.log("Photo URL from Header: ", currentUserPhotoURL);
 
 	const handleLogOut = () => {
 		logOut()
@@ -33,7 +37,7 @@ const Header = () => {
 
 	return (
 		<div className="bg-gradient-to-tr from-blue-900 to-[#0D0A25] py-2">
-			<nav className="navbar max-w-7xl mx-auto">
+			<nav className="navbar justify-center max-w-7xl mx-auto">
 				<div className="navbar-start w-auto">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost text-slate-100 lg:hidden">
@@ -81,7 +85,7 @@ const Header = () => {
 				{/* User Profile */}
 				{
 					user && (
-						<div className="navbar-end mr-1 md:hidden">
+						<div className="navbar-end w-auto mr-1 md:hidden">
 							<div className="dropdown dropdown-end mt-1 ml-6">
 								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
 									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-slate-400">
@@ -97,7 +101,10 @@ const Header = () => {
 									<li className='mt-1 text-center'>{currentUserName}</li>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
-										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
+										{/* <Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link> */}
+										<Link className='p-0 mb-2' to="/profile">
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-blue-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Profile</button>
+										</Link>
 									</li>
 									<li>
 										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}
@@ -169,7 +176,10 @@ const Header = () => {
 									<li className='mt-1 text-center'>{currentUserName}</li>
 									<div className="divider mt-1 mb-2"></div>
 									<li>
-										<Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link>
+										{/* <Link to="/profile" className="mb-2 bg-blue-500 hover:bg-blue-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Profile</Link> */}
+										<Link className='p-0 mb-2' to="/profile">
+											<button type="button" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-blue-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-sm px-8 py-2 text-center">Profile</button>
+										</Link>
 									</li>
 									<li>
 										{/* <Link onClick={handleLogOut} className="bg-red-500 hover:bg-red-600 transition hover:delay-200 text-white font-bold py-2 justify-center">Logout</Link> */}

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { FaGoogle, FaGithub, FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
+import { useContext, useState } from 'react';
+import { FaGoogle, FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
@@ -13,7 +13,7 @@ const Registration = () => {
 
 	const navigate = useNavigate();
 
-	const { createUser, logOut, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
+	const { createUser, logOut, signInWithGoogle } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [success, setSuccess] = useState("");
@@ -21,8 +21,6 @@ const Registration = () => {
 	const [passwordError, setPasswordError] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
 	const [acceptTerms, setAcceptTerms] = useState(false);
-
-	// const [accepted, setAccepted] = useState(false);
 
 	const handleRegistration = (event) => {
 		event.preventDefault();
@@ -83,6 +81,7 @@ const Registration = () => {
 			})
 	};
 
+	// Update User Information
 	const updateUserData = (currentUser, name, photoURL) => {
 		updateProfile(currentUser, {
 			displayName: name, 
@@ -94,21 +93,9 @@ const Registration = () => {
 		});
 	};
 
+	// Google Login
 	const handleGoogleRegistration = () => {
 		signInWithGoogle()
-			.then(result => {
-				const loggedUser = result.user;
-				console.log(loggedUser);
-				toast.success("Successfully registered!");
-				navigate("/");
-			})
-			.catch(error => {
-				setError(error.message);
-			})
-	};
-
-	const handleGitHubRegistration = () => {
-		signInWithGitHub()
 			.then(result => {
 				const loggedUser = result.user;
 				console.log(loggedUser);
@@ -191,7 +178,7 @@ const Registration = () => {
 						</div>
 						<div className="form-control mt-1">
 							{/* <button className="btn btn-primary text-lg" type="submit" disabled={!acceptTerms}>Register</button> */}
-							<button type="submit" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-lg px-8 py-2 text-center" disabled={!acceptTerms}>Register</button>
+							<button type="submit" className="flex gap-3 mx-auto md:mx-0 w-full items-center justify-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-lg px-8 py-2 text-center disabled:from-slate-300 disabled:to-slate-400 disabled:text-slate-600 tooltip tooltip-bottom" data-tip={!acceptTerms ? "Please Accept Terms & Conditions" : "Click to Register"} disabled={!acceptTerms}>Register</button>
 						</div>
 					</div>
 				</form>

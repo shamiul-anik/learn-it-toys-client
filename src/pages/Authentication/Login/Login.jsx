@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { FaFacebook, FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash, FaTwitter, FaYahoo } from 'react-icons/fa';
+import { useContext, useState } from 'react';
+import { FaGoogle, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { toast } from 'react-toastify';
@@ -10,7 +10,7 @@ const Login = () => {
 
 	useTitle("Login");
 
-	const { loading, setLoading, logIn, signInWithGoogle, signInWithGitHub, signInWithFacebook, signInWithTwitter, signInWithYahoo } = useContext(AuthContext);
+	const { loading, setLoading, logIn, signInWithGoogle } = useContext(AuthContext);
 
 	const [error, setError] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
@@ -52,6 +52,7 @@ const Login = () => {
 			})
 	};
 	
+	// Google Login
 	const handleGoogleLogin = () => {
 		signInWithGoogle()
 			.then(result => {
@@ -59,65 +60,6 @@ const Login = () => {
 				console.log(loggedUser);
 				toast.success("Successfully logged in!");
 				navigate(from, { replace: true })
-			})
-			.catch(error => {
-				setError(error.message);
-				setLoading(false);
-			})
-	};
-	
-	const handleGitHubLogin = () => {
-		signInWithGitHub()
-			.then(result => {
-				const loggedUser = result.user;
-				console.log(loggedUser);
-				toast.success("Successfully logged in!");
-				navigate(from, { replace: true })
-			})
-			.catch(error => {
-				setError(error.message);
-				setLoading(false);
-			})
-	};
-	
-	const handleFacebookLogin = () => {
-		signInWithFacebook()
-			.then(result => {
-				const loggedUser = result.user;
-				console.log(loggedUser);
-				toast.success("Successfully logged in using Facebook!");
-				navigate(from, { replace: true })
-				setLoading(false);
-			})
-			.catch(error => {
-				setError(error.message);
-				setLoading(false);
-			})
-	};
-	
-	const handleTwitterLogin = () => {
-		signInWithTwitter()
-			.then(result => {
-				const loggedUser = result.user;
-				console.log(loggedUser);
-				toast.success("Successfully logged in using Twitter!");
-				navigate(from, { replace: true })
-				setLoading(false);
-			})
-			.catch(error => {
-				setError(error.message);
-				setLoading(false);
-			})
-	};
-	
-	const handleYahooLogin = () => {
-		signInWithYahoo()
-			.then(result => {
-				const loggedUser = result.user;
-				console.log(loggedUser);
-				toast.success("Successfully logged in using Yahoo!");
-				navigate(from, { replace: true })
-				setLoading(false);
 			})
 			.catch(error => {
 				setError(error.message);

@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-sm lg:text-base mx-auto mt-8 py-6 border-t border-slate-500 flex flex-col gap-2 justify-center items-center">
-        <p className='text-center'>Copyright © 2023 LearnitToys. All Rights Reserved</p>
+        <p className='text-center'>Copyright © 2023 LearnitToys. All Rights Reserved.</p>
       </div>
     </footer>
   );

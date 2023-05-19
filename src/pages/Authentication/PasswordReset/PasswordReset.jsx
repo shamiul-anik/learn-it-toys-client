@@ -15,7 +15,7 @@ const PasswordReset = () => {
   const [success, setSuccess] = useState("");
   const [emailError, setEmailError] = useState("");
 
-
+  // Password Reset
   const handlePasswordReset = (event) => {
     event.preventDefault();
     const form = event.target;
