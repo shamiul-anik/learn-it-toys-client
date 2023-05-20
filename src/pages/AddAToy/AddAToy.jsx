@@ -2,7 +2,9 @@ import { useContext, useState } from 'react';
 import { useTitle } from '../../hooks/useTitle';
 import { AuthContext } from '../../providers/AuthProvider';
 import AddToyBanner from './AddToyBanner';
-import AddToyImage from '../../assets/images/add-a-toy.png';
+// import AddToyImage from '../../assets/images/add-a-toy.png';
+import Lottie from "lottie-react";
+import AddToy from '../../assets/lottie/add-toy.json';
 import { toast } from 'react-toastify';
 
 
@@ -136,12 +138,13 @@ const AddAToy = () => {
 
       <section className="flex flex-col md:flex-row gap-4 md:gap-12 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
         <div>
-          <img className="w-full min-w-[350px] image-full" src={AddToyImage} alt="Add Toy Image" />
+          {/* <img className="w-full min-w-[350px] image-full" src={AddToyImage} alt="Add Toy Image" /> */}
+          <Lottie className="max-w-xl mx-auto" animationData={AddToy} loop={true} />
         </div>
 
         {/* <div className="divider divider-horizontal"></div> */}
 
-        <div className="flex card card-compact w-full bg-base-100 px-4 py-7 box-shadow-custom">
+        <div className="flex max-w-3xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
 
           {/* <div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
             <h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Enter Toy Details</h3>

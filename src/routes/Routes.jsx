@@ -5,9 +5,10 @@ import Loader from "../pages/shared/Loader/Loader";
 const MainLayout = lazy(() => import("../layouts/MainLayout"));
 const ErrorPage = lazy(() => import("../pages/ErrorPage/ErrorPage"));
 const Home = lazy(() => import("../pages/Home/Home"));
-const Blog = lazy(() => import("../pages/Blog/Blog"));
 const AddAToy = lazy(() => import("../pages/AddAToy/AddAToy"));
 const UpdateAToy = lazy(() => import("../pages/UpdateAToy/UpdateAToy"));
+const Blog = lazy(() => import("../pages/Blog/Blog"));
+const ContactUs = lazy(() => import("../pages/ContactUs/ContactUs"));
 // const About = lazy(() => import("../pages/About/About"));
 // const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
@@ -60,10 +61,10 @@ export const router = createBrowserRouter([
 				path: 'blog',
 				element: <Suspense fallback={<Loader></Loader>}><Blog></Blog></Suspense>
 			},
-			// {
-			// 	path: 'pdf',
-			// 	element: <Suspense fallback={<Loader></Loader>}><BlogPDF></BlogPDF></Suspense>
-			// },
+			{
+				path: 'contact-us',
+				element: <Suspense fallback={<Loader></Loader>}><ContactUs></ContactUs></Suspense>
+			},
 			// {
 			// 	path: 'about',
 			// 	element: <Suspense fallback={<Loader></Loader>}><About></About></Suspense>

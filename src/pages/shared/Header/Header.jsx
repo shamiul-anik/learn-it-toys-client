@@ -63,7 +63,7 @@ const Header = () => {
 								<NavLink to="/blog">Blog</NavLink>
 							</li>
 							<li className="hover:cursor-pointer">
-								<NavLink to="/contact">Contact</NavLink>
+								<NavLink to="/contact-us">Contact Us</NavLink>
 							</li>
 							{
 								!user && (
@@ -143,7 +143,7 @@ const Header = () => {
 							<NavLink to="/blog">Blog</NavLink>
 						</li>
 						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/contact">Contact</NavLink>
+							<NavLink to="/contact-us">Contact Us</NavLink>
 						</li>
 						{/* <li className="nav-item hover:cursor-pointer">
 							<NavLink to="/about">About</NavLink>

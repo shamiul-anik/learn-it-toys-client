@@ -131,7 +131,7 @@ const UpdateAToy = () => {
   return (
     <div>
 
-      {/* Add Toy Banner */}
+      {/* Update Toy Banner */}
       <UpdateToyBanner></UpdateToyBanner>
 
       <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
@@ -141,7 +141,7 @@ const UpdateAToy = () => {
 
         {/* <div className="divider divider-horizontal"></div> */}
 
-        <div className="flex card card-compact w-full bg-base-100 px-4 py-7 box-shadow-custom">
+        <div className="flex card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
 
           {/* <div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
             <h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Enter Toy Details</h3>
