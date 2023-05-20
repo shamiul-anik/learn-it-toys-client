@@ -48,9 +48,8 @@
 
 /* Custom Primary Button */
 /* Large */
-.primary-button-lg {
+/* .primary-button-lg {
   background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
-  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 20px;
@@ -58,12 +57,11 @@
   color: #FFFFFF;
   padding: 18px 28px;
   transition: all 0.3s;
-}
+} */
 
 /* Medium */
-.primary-button-md {
+/* .primary-button-md {
   background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
-  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 18px;
@@ -72,12 +70,11 @@
   color: #FFFFFF;
   padding: 10px 24px;
   transition: all 0.3s;
-}
+} */
 
 /* Small */
-.primary-button-sm {
+/* .primary-button-sm {
   background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
-  /* background: linear-gradient(99.45deg, #7A68FD -9.1%, #FBD0FE 21.61%, #AAF1FE 55.69%); */
   border-radius: 8px;
   font-weight: 700;
   font-size: 16px;
@@ -86,15 +83,15 @@
   color: #FFFFFF;
   padding: 8px 16px;
   transition: all 0.3s;
-}
+} */
 
 /* Primary and Secondary Button Hover */
-.primary-button-lg:hover,
+/* .primary-button-lg:hover,
 .primary-button-md:hover,
 .primary-button-sm:hover {
   cursor: pointer;
   background: linear-gradient(90deg, #6275ed 0%, #5567de 100%);
-}
+} */
 
 /* Subscribe Button */
 .subscribe-btn {
@@ -117,12 +114,12 @@
   text-fill-color: transparent;
 }
 
-.highlighted-text {
+/* .highlighted-text {
   background: linear-gradient(90deg, #6a7cf4 0%, #6275ed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
 /* Banner Description */
 .banner-description {
@@ -236,6 +233,7 @@
   text-decoration: underline;
 }
 
+/* Readonly Input Field Design */
 .input[readonly] {
   background-color: #F8F8F8;
 }

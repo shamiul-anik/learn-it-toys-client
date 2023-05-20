@@ -23,7 +23,7 @@ const Header = () => {
 	const currentUserEmail = user?.email;
 
 	// console.log("Name from Header: ", currentUserName);
-	console.log("Photo URL from Header: ", currentUserPhotoURL);
+	// console.log("Photo URL from Header: ", currentUserPhotoURL);
 
 	const handleLogOut = () => {
 		logOut()

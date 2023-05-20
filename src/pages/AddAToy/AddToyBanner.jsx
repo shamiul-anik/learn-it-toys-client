@@ -14,7 +14,7 @@ const AddToyBanner = () => {
 
         <div className="max-w-xl p-4 text-center">
           <header>
-            <h1 className='banner-highlighted-text text-4xl font-bold'>Add a Toy</h1>
+            <h1 className='banner-highlighted-text text-4xl font-bold'>Add A Toy</h1>
           </header>
           {/* <p className="banner-description mt-4 mb-1 lg:mb-2 !text-center font-semibold text-lg">A. K. M. Shamiul Islam</p>
           <p className="banner-description mb-8 lg:mb-12 !text-center font-semibold !text-sm">May 20, 2023</p> */}

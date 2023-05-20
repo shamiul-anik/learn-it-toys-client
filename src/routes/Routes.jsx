@@ -7,6 +7,7 @@ const ErrorPage = lazy(() => import("../pages/ErrorPage/ErrorPage"));
 const Home = lazy(() => import("../pages/Home/Home"));
 const Blog = lazy(() => import("../pages/Blog/Blog"));
 const AddAToy = lazy(() => import("../pages/AddAToy/AddAToy"));
+const UpdateAToy = lazy(() => import("../pages/UpdateAToy/UpdateAToy"));
 // const About = lazy(() => import("../pages/About/About"));
 // const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
@@ -32,7 +33,12 @@ export const router = createBrowserRouter([
 			// },
 			{
 				path: "/add-a-toy",
-				element: <Suspense fallback={<Loader></Loader>}><AddAToy></AddAToy></Suspense>,
+				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><AddAToy></AddAToy></PrivateRoute></Suspense>,
+			},
+			{
+				path: "/update/:id",
+				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><UpdateAToy></UpdateAToy></PrivateRoute></Suspense>,
+				loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
 			},
 			{
 				path: 'login',
