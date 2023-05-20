@@ -11,49 +11,85 @@ const AddAToy = () => {
   
   useTitle("Add a Toy");
 
-  const navigate = useNavigate();
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  // const [emailError, setEmailError] = useState("");
-  // const [passwordError, setPasswordError] = useState("");
+  
+  const [toyNameError, setToyNameError] = useState("");
+  const [photoURLError, setPhotoURLError] = useState("");
+  // const [sellerNameError, setSellerNameError] = useState("");
+  const [sellerEmailError, setSellerEmailError] = useState("");
+  const [subCategoryError, setSubCategoryError] = useState("");
+  const [ratingError, setRatingError] = useState("");
+  const [priceError, setPriceError] = useState("");
+  const [quantityError, setQuantityError] = useState("");
+  const [descriptionError, setDescriptionError] = useState("");
 
   const { user } = useContext(AuthContext);
 
   const currentUserName = user?.displayName;
   const currentUserEmail = user?.email;
 
-  
-  // const [showPassword, setShowPassword] = useState(false);
-  // const [acceptTerms, setAcceptTerms] = useState(false);
-
   const handleToyRegistration = (event) => {
     event.preventDefault();
     const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
-    const name = form.name.value;
-    const photoURL = form.photoURL.value;
-    console.log(name, photoURL, email, password)
+    
+    const toy_name = form.toy_name.value;
+    const photo_url = form.photo_url.value;
+    const seller_name = form.seller_name.value;
+    const seller_email = form.seller_email.value;
+    const sub_category = form.sub_category.value;
+    const rating = form.rating.value;
+    const price = form.price.value;
+    const quantity = form.quantity.value;
+    const description = form.description.value;
+    console.log({ toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description });
 
     setSuccess("");
     setError("");
-    setEmailError("");
-    setPasswordError("");
 
-    if (email.length < 1) {
-      setEmailError("Email field can not be empty!");
+    setToyNameError("");
+    setPhotoURLError("");
+    // setSellerNameError("");
+    setSellerEmailError("");
+    setSubCategoryError("");
+    setRatingError("");
+    setPriceError("");
+    setQuantityError("");
+    setDescriptionError("");
+
+    if (toy_name.length < 1) {
+      setToyNameError("You must enter a toy name!");
+      return;
+    }
+    if (photo_url.length < 1) {
+      setPhotoURLError("You must enter a valid photo url!");
+      return;
+    }
+    if (seller_email.length < 1) {
+      setSellerEmailError("Email field can not be empty!");
+      return;
+    }
+    if (sub_category.length < 1) {
+      setSubCategoryError("You must choose a sub-category!");
+      return;
+    }
+    if (rating.length < 1) {
+      setRatingError("This field can not be empty!");
+      return;
+    }
+    if (price.length < 1) {
+      setPriceError("This field can not be empty!");
+      return;
+    }
+    if (quantity.length < 1) {
+      setQuantityError("This field can not be empty!");
+      return;
+    }
+    if (description.length < 1) {
+      setDescriptionError("This field can not be empty!");
       return;
     }
 
-    if (password.length < 1) {
-      setPasswordError("Password field can not be empty!");
-      return;
-    }
-
-    if (password.length < 6) {
-      setPasswordError("Password should be at least 6 characters long!");
-      return;
-    }
 
     
   };
@@ -61,7 +97,7 @@ const AddAToy = () => {
   return (
     <div>
 
-      {/* Blog Banner */}
+      {/* Add Toy Banner */}
       <AddToyBanner></AddToyBanner>
 
       <section className="flex flex-col md:flex-row gap-4 md:gap-12 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
@@ -79,8 +115,8 @@ const AddAToy = () => {
 
           {/* <div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div> */}
 
-          <p className="!px-6 md:!px-8 text-red-500 mt-2 text-center">{error}</p>
-          <p className="!px-6 md:!px-8 text-green-600 mt-2 text-center">{success}</p>
+          {error && <p className="!px-6 md:!px-8 text-red-500 mt-2 text-center">{error}</p>}
+          {success && <p className="!px-6 md:!px-8 text-green-600 mt-2 text-center">{success}</p>}
 
           <form onSubmit={handleToyRegistration}>
             <div className="!px-6 md:!px-8 !pt-2 card-body">
@@ -88,19 +124,19 @@ const AddAToy = () => {
                 <label className="label pl-0" htmlFor="toyName">
                   <span className="label-text text-md md:text-[16px]">Toy Name</span>
                 </label>
-                <input type="text" id="toyName" name="toy_name" placeholder="Enter toy name" className="input input-bordered  input-sm py-5 text-[14px]" />
-                <p className="text-red-500 mt-2"></p> 
+                <input type="text" id="toyName" name="toy_name" placeholder="Enter toy name" className={toyNameError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} />
+                {toyNameError && <p className="text-red-500 mt-2">{toyNameError}</p>}
               </div>
 
               <div className="form-control">
                 <label className="label pl-0" htmlFor="photoURL">
                   <span className="label-text text-md md:text-[16px]">Photo URL</span>
                 </label>
-                <input type="text" id="photoURL" name="photo_url" placeholder="Enter toy's photo url" className="input input-bordered input-sm py-5 text-[14px]" />
-                <p className="text-red-500 mt-2"></p>
+                <input type="text" id="photoURL" name="photo_url" placeholder="Enter toy's photo url" className={photoURLError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} />
+                {photoURLError && <p className="text-red-500 mt-2">{photoURLError}</p>}
               </div>
               
-              <div className="grid gap-6 mb-4 md:mb-6 md:grid-cols-2">
+              <div className="grid gap-x-4 gap-y-2 md:grid-cols-2">
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="sellerName">
                     <span className="label-text text-md md:text-[16px]">Seller Name</span>
@@ -112,40 +148,45 @@ const AddAToy = () => {
                   <label className="label pl-0" htmlFor="sellerEmail">
                     <span className="label-text text-md md:text-[16px]">Seller Email</span>
                   </label>
-                  <input type="email" id="sellerEmail" name="seller_email" placeholder="Seller's email address" className="input input-bordered input-sm py-5 text-[14px]" defaultValue={currentUserEmail} />
+                  <input type="email" id="sellerEmail" name="seller_email" placeholder="Seller's email address" className={sellerEmailError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} defaultValue={currentUserEmail} />
+                  {sellerEmailError && <p className="text-red-500 mt-2">{sellerEmailError}</p>}
                 </div>
 
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="subCategory">
                     <span className="label-text text-md md:text-[16px]">Sub-category</span>
                   </label>
-                  <select id="subCategory" name="sub_category" className="select select-bordered select-sm min-h-[42px] leading-tight !text-[14px] !font-normal">
-                    <option selected>Choose sub-category</option>
+                  <select id="subCategory" name="sub_category" className={subCategoryError ? "select select-bordered border-red-500 select-sm min-h-[42px] leading-tight !text-[14px] !font-normal focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "select select-bordered select-sm min-h-[42px] leading-tight !text-[14px] !font-normal"}>
+                    <option value="">Choose sub-category</option>
                     <option value="language_toys">Language Toys</option>
                     <option value="math_toys">Math Toys</option>
                     <option value="science_toys">Science</option>
                   </select>
+                  {subCategoryError && <p className="text-red-500 mt-2">{subCategoryError}</p>}
                 </div>
 
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="rating">
                     <span className="label-text text-md md:text-[16px]">Rating</span>
                   </label>
-                  <input type="text" id="rating" name="rating" placeholder="Enter toy's rating" className="input input-bordered input-sm py-5 text-[14px]" />
+                  <input type="number" id="rating" name="rating" placeholder="Enter toy's rating" className={ratingError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} />
+                  {ratingError && <p className="text-red-500 mt-2">{ratingError}</p>}
                 </div>
 
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="price">
                     <span className="label-text text-md md:text-[16px]">Price</span>
                   </label>
-                  <input type="text" id="price" name="price" placeholder="Enter toy's price" className="input input-bordered input-sm py-5 text-[14px]" />
+                  <input type="number" id="price" name="price" placeholder="Enter toy's price" className={priceError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} />
+                  {priceError && <p className="text-red-500 mt-2">{priceError}</p>}
                 </div>
 
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="quantity">
                     <span className="label-text text-md md:text-[16px]">Quantity</span>
                   </label>
-                  <input type="text" id="quantity" name="quantity" placeholder="Enter available quantity" className="input input-bordered  input-sm py-5 text-[14px]" />
+                  <input type="number" id="quantity" name="quantity" placeholder="Enter available quantity" className={quantityError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} />
+                  {quantityError && <p className="text-red-500 mt-2">{quantityError}</p>}
                 </div>
               </div>
               
@@ -153,7 +194,8 @@ const AddAToy = () => {
                 <label className="label pl-0" htmlFor="description">
                   <span className="label-text text-md md:text-[16px]">Description</span>
                 </label>
-                <textarea id="description" name="description" rows="6" className="input input-bordered h-auto" placeholder="Enter detail description"></textarea>
+                <textarea id="description" name="description" rows="6" className={descriptionError ? "input input-error input-sm py-5 text-[14px] h-auto focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered text-[14px] h-auto"} placeholder="Enter detail description"></textarea>
+                {descriptionError && <p className="text-red-500 mt-2">{descriptionError}</p>}
               </div>
               
               <div className="form-control mt-2">
