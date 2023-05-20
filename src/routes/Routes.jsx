@@ -6,10 +6,10 @@ const MainLayout = lazy(() => import("../layouts/MainLayout"));
 const ErrorPage = lazy(() => import("../pages/ErrorPage/ErrorPage"));
 const Home = lazy(() => import("../pages/Home/Home"));
 const Blog = lazy(() => import("../pages/Blog/Blog"));
-const BlogPDF = lazy(() => import("../pages/Blog/BlogPDF"));
+const AddAToy = lazy(() => import("../pages/AddAToy/AddAToy"));
 // const About = lazy(() => import("../pages/About/About"));
 // const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
-// const PrivateRoute = lazy(() => import("./PrivateRoute"));
+const PrivateRoute = lazy(() => import("./PrivateRoute"));
 const Login = lazy(() => import("../pages/Authentication/Login/Login"));
 const Registration = lazy(() => import("../pages/Authentication/Registration/Registration"));
 const PasswordReset = lazy(() => import("../pages/Authentication/PasswordReset/PasswordReset"));
@@ -31,6 +31,10 @@ export const router = createBrowserRouter([
 			// 	loader: ({ params }) => fetch(`https://chef-world-server.vercel.app/recipes/${params.id}`)
 			// },
 			{
+				path: "/add-a-toy",
+				element: <Suspense fallback={<Loader></Loader>}><AddAToy></AddAToy></Suspense>,
+			},
+			{
 				path: 'login',
 				element: <Suspense fallback={<Loader></Loader>}><Login></Login></Suspense>
 			},
@@ -50,10 +54,10 @@ export const router = createBrowserRouter([
 				path: 'blog',
 				element: <Suspense fallback={<Loader></Loader>}><Blog></Blog></Suspense>
 			},
-			{
-				path: 'pdf',
-				element: <Suspense fallback={<Loader></Loader>}><BlogPDF></BlogPDF></Suspense>
-			},
+			// {
+			// 	path: 'pdf',
+			// 	element: <Suspense fallback={<Loader></Loader>}><BlogPDF></BlogPDF></Suspense>
+			// },
 			// {
 			// 	path: 'about',
 			// 	element: <Suspense fallback={<Loader></Loader>}><About></About></Suspense>

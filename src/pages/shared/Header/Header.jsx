@@ -57,7 +57,7 @@ const Header = () => {
 								<NavLink to="/my-toys">My Toys</NavLink>
 							</li>
 							<li className="hover:cursor-pointer">
-								<NavLink to="/add-toy">Add A Toy</NavLink>
+								<NavLink to="/add-a-toy">Add A Toy</NavLink>
 							</li>
 							<li className="hover:cursor-pointer">
 								<NavLink to="/blog">Blog</NavLink>
@@ -137,7 +137,7 @@ const Header = () => {
 							<NavLink to="/my-toys">My Toys</NavLink>
 						</li>
 						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/add-toy">Add A Toy</NavLink>
+							<NavLink to="/add-a-toy">Add A Toy</NavLink>
 						</li>
 						<li className="nav-item hover:cursor-pointer">
 							<NavLink to="/blog">Blog</NavLink>

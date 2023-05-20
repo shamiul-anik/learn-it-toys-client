@@ -1,10 +1,10 @@
 import Sphere1 from '../../assets/images/sphere1.png';
 import Sphere2 from '../../assets/images/sphere1.png';
 
-const BlogBanner = () => {
+const AddToyBanner = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 to-[#0D0A25]">
-      <div className="flex justify-center items-center gap-8 max-w-7xl mx-auto py-8 lg:py-12">
+      <div className="flex justify-center items-center gap-8 max-w-7xl mx-auto py-16 lg:py-24">
 
         {/* Spheres */}
         <img className="hidden md:block absolute -top-3 -left-1 blur-md" src={Sphere1} alt="Sphere 1" />
@@ -14,20 +14,20 @@ const BlogBanner = () => {
 
         <div className="max-w-xl p-4 text-center">
           <header>
-            <h1 className='banner-highlighted-text text-4xl font-bold'>React Q&A Blog</h1>
+            <h1 className='banner-highlighted-text text-4xl font-bold'>Add a Toy</h1>
           </header>
-          <p className="banner-description mt-4 mb-1 lg:mb-2 !text-center font-semibold text-lg">By, A. K. M. Shamiul Islam</p>
-          <p className="banner-description mb-8 lg:mb-12 !text-center font-semibold !text-sm">Published on May 20, 2023</p>
+          {/* <p className="banner-description mt-4 mb-1 lg:mb-2 !text-center font-semibold text-lg">A. K. M. Shamiul Islam</p>
+          <p className="banner-description mb-8 lg:mb-12 !text-center font-semibold !text-sm">May 20, 2023</p> */}
           {/* <Link to="/">
               <button type="button" className="flex gap-3 mx-auto md:mx-0 items-center justify-center text-white w-48 bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-semibold rounded-lg text-xl px-5 py-4 text-center">Explore <FaArrowRight /></button>
             </Link> */}
         </div>
         {/* <div className="p-4 pb-0">
-            <img className="max-w-xl w-full image-full" src={BannerImage} alt="Banner Image" />
-          </div> */}
+          <img className="max-w-xl w-full image-full" src={AddToyImage} alt="Add Toy Image" />
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default BlogBanner;
+export default AddToyBanner;

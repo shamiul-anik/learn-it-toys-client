@@ -1,3 +1,4 @@
+import { Carousel } from "flowbite-react";
 
 const Gallery = () => {
   return (
@@ -56,6 +57,33 @@ const Gallery = () => {
             </div>
           </div>
         </div>
+
+        {/* <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <Carousel slideInterval={5000}>
+            <img
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+              alt="..."
+            />
+            <img
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+              alt="..."
+            />
+            <img
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+              alt="..."
+            />
+            <img
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+              alt="..."
+            />
+            <img
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+              alt="..."
+            />
+          </Carousel>
+        </div> */}
+
+
       </section>
     </div>
   );
