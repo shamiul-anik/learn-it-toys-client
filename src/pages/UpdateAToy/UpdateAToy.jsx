@@ -12,6 +12,7 @@ const UpdateAToy = () => {
   useTitle("Update a Toy");
 
   const loadedToy = useLoaderData();
+  // const [loadedToy, setLoadedToy] = useState(loadedToyData);
   console.log(loadedToy);
 
   const [error, setError] = useState("");
@@ -83,6 +84,10 @@ const UpdateAToy = () => {
       setRatingError("This field can not be empty!");
       return;
     }
+    if (rating > 5) {
+      setRatingError("Rating point cannot exceed 5!");
+      return;
+    }
     if (typeof (price) !== "number" || isNaN(price)) {
       setPriceError("You must enter a numeric value!");
       return;
@@ -118,10 +123,10 @@ const UpdateAToy = () => {
         .then(data => {
           console.log(data);
           if (data.modifiedCount > 0) {
-            toast.success("Toy updated successfully!")
+            toast.success("Toy updated successfully!");
           }
           else {
-            toast.error("Something went wrong!")
+            toast.error("Something went wrong!");
           }
         });
     }
@@ -136,7 +141,7 @@ const UpdateAToy = () => {
 
       <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
         <div>
-          <img className="w-full min-w-[350px] image-full" src={UpdateToyImage} alt="Update Toy Image" />
+          <img className="w-full min-w-[350px] max-w-xl rounded-xl image-full" src={loadedToy.photo_url ? loadedToy.photo_url : UpdateToyImage} alt={loadedToy.photo_url ? "Toy Image" : "Update Toy Image"} />
         </div>
 
         {/* <div className="divider divider-horizontal"></div> */}

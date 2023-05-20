@@ -85,6 +85,10 @@ const AddAToy = () => {
       setRatingError("This field can not be empty!");
       return;
     }
+    if (rating > 5) {
+      setRatingError("Rating point cannot exceed 5!");
+      return;
+    }
     if (typeof (price) !== "number" || isNaN(price)) {
       setPriceError("You must enter a numeric value!");
       return;
@@ -141,8 +145,6 @@ const AddAToy = () => {
           {/* <img className="w-full min-w-[350px] image-full" src={AddToyImage} alt="Add Toy Image" /> */}
           <Lottie className="max-w-xl mx-auto" animationData={AddToy} loop={true} />
         </div>
-
-        {/* <div className="divider divider-horizontal"></div> */}
 
         <div className="flex max-w-3xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
 

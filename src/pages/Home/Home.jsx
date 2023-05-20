@@ -5,6 +5,7 @@ import Newsletter from './Newsletter';
 import LatestToys from './LatestToys';
 import TrendingToys from './TrendingToys';
 import Gallery from './Gallery';
+import Testimonial from './Testimonial';
 
 const Home = () => {
   
@@ -36,6 +37,8 @@ const Home = () => {
 
       {/* Discount */}
       
+      {/* Testimonial */}
+      <Testimonial></Testimonial>
 
       {/* Subscribe to Our Newsletter */}
       <Newsletter></Newsletter>
