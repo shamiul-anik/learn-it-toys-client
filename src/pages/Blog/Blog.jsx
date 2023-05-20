@@ -2,7 +2,7 @@ import { useTitle } from '../../hooks/useTitle';
 import BlogPDF from './BlogPDF';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { FaFilePdf, FaSpinner } from 'react-icons/fa';
-import ReactBanner from '../../assets/images/react-banner.png';
+// import ReactBanner from '../../assets/images/react-banner.png';
 import BlogBanner from './BlogBanner';
 
 const Blog = () => {
@@ -30,11 +30,22 @@ const Blog = () => {
           </PDFDownloadLink>
         </div>
 
-        <div className="p-4 lg:p-8 rounded-lg box-shadow-custom mt-6">
+        <div className="p-4 lg:p-8 rounded-lg border-2 border-slate-200 mt-6">
           {/* React Banner */}
-          <div className="question-img">
+          {/* <div className="question-img">
             <img src={ReactBanner} alt="Q&amp;A Banner" />
+          </div> */}
+
+          <div>
+            <header>
+              <h2 className="content-title text-center">A. K. M. Shamiul Islam</h2>
+            </header>
+            <p className="content-description text-center mb-8">
+              Published on May 20, 2023
+            </p>
           </div>
+
+          <div className="divider"></div>
 
           {/* Question-1 */}
           <div>

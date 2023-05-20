@@ -20,7 +20,7 @@ const Footer = () => {
             At LearnitToys, we believe that education should be fun and engaging. Our carefully curated selection of educational toys is designed to ignite curiosity, foster creativity, and inspire a love for learning in children of all ages.
           </p> */}
           <p className='text-justify mb-2'>
-            Explore our collection today and embark on a journey of endless discovery with LearnitToys - Where Learning Comes to Life!
+            Explore our collection today and embark on a journey of endless discovery with LearnitToys- Where Learning Comes to Life!
           </p>
           <header>
             <h4 className='text-xl mb-2 underline underline-offset-2'>Get in touch with us</h4>

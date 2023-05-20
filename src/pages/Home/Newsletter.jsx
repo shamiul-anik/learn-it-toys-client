@@ -3,7 +3,7 @@ import { BsFillSendFill } from "react-icons/bs";
 const Newsletter = () => {
   return (
     <section className="max-w-7xl mx-auto mt-12 lg:mt-20">
-      <div className="mx-4 p-6 lg:p-12 rounded-lg border border-slate-200 mt-6">
+      <div className="mx-4 p-6 lg:p-12 rounded-lg border-2 border-slate-200 mt-6">
         <header>
           <h2 className="content-title text-center">Stay in the Loop with LearnitToys Newsletter!</h2>
         </header>
