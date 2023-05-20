@@ -53,12 +53,16 @@ const Header = () => {
 							<li className="hover:cursor-pointer">
 								<NavLink to="/all-toys">All Toys</NavLink>
 							</li>
-							<li className="hover:cursor-pointer">
-								<NavLink to="/my-toys">My Toys</NavLink>
-							</li>
-							<li className="hover:cursor-pointer">
-								<NavLink to="/add-a-toy">Add A Toy</NavLink>
-							</li>
+							{user && (
+								<>
+									<li className="hover:cursor-pointer">
+										<NavLink to="/my-toys">My Toys</NavLink>
+									</li>
+									<li className="hover:cursor-pointer">
+										<NavLink to="/add-a-toy">Add A Toy</NavLink>
+									</li>
+								</>
+							)}
 							<li className="hover:cursor-pointer">
 								<NavLink to="/blog">Blog</NavLink>
 							</li>
@@ -133,12 +137,16 @@ const Header = () => {
 						<li className="nav-item hover:cursor-pointer">
 							<NavLink to="/all-toys">All Toys</NavLink>
 						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/my-toys">My Toys</NavLink>
-						</li>
-						<li className="nav-item hover:cursor-pointer">
-							<NavLink to="/add-a-toy">Add A Toy</NavLink>
-						</li>
+						{user && (
+							<>
+								<li className="nav-item hover:cursor-pointer">
+									<NavLink to="/my-toys">My Toys</NavLink>
+								</li>
+								<li className="nav-item hover:cursor-pointer">
+									<NavLink to="/add-a-toy">Add A Toy</NavLink>
+								</li>
+							</>
+						)}
 						<li className="nav-item hover:cursor-pointer">
 							<NavLink to="/blog">Blog</NavLink>
 						</li>
