@@ -14,19 +14,41 @@ const ContactUs = () => {
       {/* Contact Banner */}
       <ContactBanner></ContactBanner>
 
-      <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
+      {/* Google Map */}
+      <div className="mt-12 md:mt-20">
+        <header>
+          <h2 className="content-title text-center">Find Us on Google Map</h2>
+        </header>
+        <p className="content-description text-center mb-8">
+          Check out the map for finding our location.
+        </p>
+      </div>
+      <div className="max-w-[1190px] w-100 mx-auto">
+        <iframe className="border-2 border-slate-200 w-full h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1811708823325!2d90.41576684428637!3d23.780119352475314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79ebfc24eab%3A0xea7dab563f12457a!2sGulshan%201%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1684626393720!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+
+      <div className="mt-16 md:mt-24">
+        <header>
+          <h2 className="content-title text-center">Get in Touch with Us</h2>
+        </header>
+        <p className="content-description text-center">
+          We will get back to you as soon as we can.
+        </p>
+      </div>
+      <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-4 md:mt-8 p-4">
         <div>
           <Lottie className="max-w-xl mx-auto" animationData={ContactUsImage} loop={true} />
         </div>
 
         <div className="flex max-w-xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
-
+{/* 
           <div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
             <h3 className='text-slate-700 text-2xl mb-2 font-bold text-center'>Get in touch with us</h3>
             <p className="text-slate-500 text-md font-medium text-center">We will get back to you as soon as we can.</p>
           </div>
 
-          <div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div>
+          <div className='border-t border-slate-300 my-4 mx-6 md:mx-8'></div> */}
 
           <form onSubmit={(e) => e.preventDefault()}>
             <div className="!px-6 md:!px-8 !pt-2 card-body">
@@ -64,7 +86,7 @@ const ContactUs = () => {
 
         </div>
       </section>
-      
+
     </div>
   );
 };
