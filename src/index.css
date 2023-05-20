@@ -236,6 +236,17 @@
   text-decoration: underline;
 }
 
+.input[readonly] {
+  background-color: #F8F8F8;
+}
+
+.input[readonly]:focus {
+  outline: none;
+  border: 1px solid lightgray;
+  box-shadow: none;
+  cursor: auto;
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 767px) {

@@ -35,15 +35,17 @@ const AddAToy = () => {
     
     const toy_name = form.toy_name.value;
     const photo_url = form.photo_url.value;
-    const seller_name = form.seller_name.value;
-    const seller_email = form.seller_email.value;
+    const seller_name = currentUserName;
+    const seller_email = currentUserEmail;
+    // const seller_name = form.seller_name.value;
+    // const seller_email = form.seller_email.value;
     const sub_category = form.sub_category.value;
     const rating = Number(form.rating.value);
     const price = Number(form.price.value);
     const quantity = Number(form.quantity.value);
     const description = form.description.value;
     
-    // console.log({ toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description });
+    console.log({ toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description });
 
     setSuccess("");
     setError("");
@@ -103,21 +105,21 @@ const AddAToy = () => {
       return;
     }
     else {
-      const toyInfo = { toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description };
-      console.log("toyInfo:", toyInfo);
+      const toy = { toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description };
+      console.log("toy:", toy);
 
       fetch("http://localhost:5000/add-a-toy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(toyInfo),
+        body: JSON.stringify(toy),
       })
         .then(res => res.json())
         .then(data => {
           console.log(data);
           if (data.insertedId) {
-            toast.success("Toy information added successfully!")
+            toast.success("Toy added successfully!")
           }
           else {
             toast.error("Something went wrong!")
@@ -174,14 +176,14 @@ const AddAToy = () => {
                   <label className="label pl-0" htmlFor="sellerName">
                     <span className="label-text text-md md:text-[16px]">Seller Name</span>
                   </label>
-                  <input type="text" id="sellerName" name="seller_name" placeholder="Seller's name" className="input input-bordered input-sm py-5 text-[14px]" defaultValue={currentUserName} />
+                  <input type="text" id="sellerName" name="seller_name" placeholder="Seller's name" className="input input-bordered input-sm py-5 text-[14px]" defaultValue={currentUserName} readOnly />
                 </div>
 
                 <div className="form-control">
                   <label className="label pl-0" htmlFor="sellerEmail">
                     <span className="label-text text-md md:text-[16px]">Seller Email</span>
                   </label>
-                  <input type="email" id="sellerEmail" name="seller_email" placeholder="Seller's email address" className={sellerEmailError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} defaultValue={currentUserEmail} />
+                  <input type="email" id="sellerEmail" name="seller_email" placeholder="Seller's email address" className={sellerEmailError ? "input input-error input-sm py-5 text-[14px] focus:outline-red-200 focus:ring-red-500 focus:border-red-500" : "input input-bordered input-sm py-5 text-[14px]"} defaultValue={currentUserEmail} readOnly />
                   {sellerEmailError && <p className="text-red-500 mt-2">{sellerEmailError}</p>}
                 </div>
 
