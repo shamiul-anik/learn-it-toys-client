@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Discount = () => {
   return (
-    <section className="mt-16 md:mt-22 max-w-7xl mx-auto rounded-lg bg-white dark:bg-gray-900">
+    <section className="mt-16 md:mt-22 max-w-7xl p-4 mx-auto rounded-lg bg-white dark:bg-gray-900">
       <header>
         <h2 className="content-title text-center">Discount</h2>
       </header>

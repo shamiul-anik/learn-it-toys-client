@@ -34,14 +34,16 @@ const ShopByCategory = () => {
   return (
     <div className="mt-16 md:mt-24">
 
-      <header>
-        <h2 className="content-title text-center">Shop By Category</h2>
-      </header>
-      <p className="content-description text-center mt-2">
-        Find out about the different sub-categories of toys in LearnitToys.
-      </p>
+      <div className="max-w-7xl p-4 mx-auto">
+        <header>
+          <h2 className="content-title text-center">Shop By Category</h2>
+        </header>
+        <p className="content-description text-center mt-2">
+          Find out about the different sub-categories of toys in LearnitToys.
+        </p>
+      </div>
 
-      <section className="max-w-7xl mt-4 md:mt-12 mx-auto border-2 border-slate-200 rounded-xl">
+      <section className="max-w-7xl p-4 mt-4 md:mt-12 mx-auto border-2 border-slate-200 rounded-xl">
         <Tabs.Group
         aria-label="Default tabs"
         style="default"

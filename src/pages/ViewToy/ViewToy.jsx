@@ -19,7 +19,7 @@ const ViewToy = () => {
       {/* View Toy Banner */}
       <ViewToyBanner></ViewToyBanner>
 
-      <div className='max-w-7xl mx-auto mt-4 lg:mt-12 '>
+      <div className='max-w-7xl mx-auto mt-8 mb-4 lg:mt-12 px-4'>
         <Link to="/all-toys" className="relative flex w-56 items-center justify-center p-0.5 overflow-hidden text-md font-semibold text-blue-700 rounded-lg group bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-blue-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
           <span className="flex items-center justify-center w-full px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg group-hover:bg-opacity-0">
             <FaArrowLeft className="mr-2 self-center" /> Back to All Toys

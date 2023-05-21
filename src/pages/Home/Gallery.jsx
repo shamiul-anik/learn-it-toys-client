@@ -8,7 +8,7 @@ const Gallery = () => {
           <h2 className="content-title text-center">Gallery</h2>
         </header>
         <p className="content-description text-center mt-2 mb-8 md:mb-12">
-          Check our gallery to find out about some awesome toys!
+          Discover a world of educational toys in our gallery!
         </p>
 
         <div className="h-56 md:h-80 xl:h-[450px]">
