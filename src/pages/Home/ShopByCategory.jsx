@@ -1,34 +1,37 @@
-import { Tabs } from "flowbite-react";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from "react";
 import LanguageToys from "./LanguageToys";
+import MathToys from './MathToys';
+import ScienceToys from './ScienceToys';
+
 
 const ShopByCategory = () => {
 
-
   const [allToys, setAllToys] = useState([]);
-  const [languageToys, setLanguageToys] = useState([]);
-  const [mathToys, setMathToys] = useState([]);
-  const [scienceToys, setScienceToys] = useState([]);
 
-  // useEffect(() => {
-  //   fetch('https://learn-it-toys-server.vercel.app/toys')
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     // setAllToys(data);
-  //     // const data1 = data;
-  //     // const data2 = data;
-  //     // const data3 = data;
+  const [tabIndex, setTabIndex] = useState(0);
 
-  //     const getLanguageData = data.filter(toy => toy.sub_category === "Language Toys");
-  //     setLanguageToys(getLanguageData);
+  useEffect(() => {
+    fetch('https://learn-it-toys-server.vercel.app/toys')
+    .then(res => res.json())
+    .then(data => {
+      if(tabIndex == 0) {
+        const getLanguageData = data.filter(toy => toy.sub_category === "Language Toys");
+        setAllToys(getLanguageData);
+      }
+      if(tabIndex == 1) {
+        const getMathData = data.filter(toy => toy.sub_category === "Math Toys");
+        setAllToys(getMathData);
+      }
+      if(tabIndex == 2) {
+        const getScienceData = data.filter(toy => toy.sub_category === "Science Toys");
+        setAllToys(getScienceData);
+      }
+      
 
-  //     // const getMathData = data2.filter(toy => toy.sub_category === "Math Toys");
-  //     // setMathToys(getMathData);
-
-  //     // const getScienceData = data3.filter(toy => toy.sub_category === "Science Toys");
-  //     // setScienceToys(getScienceData);
-  //   })
-  // }, []);
+    })
+  }, [tabIndex]);
 
   
   return (
@@ -44,45 +47,37 @@ const ShopByCategory = () => {
       </div>
 
       <section className="max-w-7xl p-4 mt-4 md:mt-12 mx-auto border-2 border-slate-200 rounded-xl">
-        <Tabs.Group
-        aria-label="Default tabs"
-        style="default"
-      >
-        <Tabs.Item
-          active={true}
-          title="Language Toys"
-        >
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+          <TabList>
+            <Tab>Language Toys</Tab>
+            <Tab>Math Toys</Tab>
+            <Tab>Science Toys</Tab>
+          </TabList>
+
+          <TabPanel>
+            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
               {
-                languageToys.map((data) => <LanguageToys key={data._id} data={data}></LanguageToys>)
+                allToys.map((toyData) => <LanguageToys key={toyData._id} toyData={toyData}></LanguageToys>)
               }
             </div>
-        </Tabs.Item>
-        <Tabs.Item title="Math Toys">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
               {
-                mathToys.map((dataNew2, index) => <LanguageToys key={index} dataNew2={dataNew2}></LanguageToys>)
+                allToys.map((toyData) => <MathToys key={toyData._id} toyData={toyData}></MathToys>)
               }
             </div>
-        </Tabs.Item>
-        <Tabs.Item title="Science Toys">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
               {
-                scienceToys.map((dataNew3, index) => <LanguageToys key={index} dataNew3={dataNew3}></LanguageToys>)
+                allToys.map((toyData) => <ScienceToys key={toyData._id} toyData={toyData}></ScienceToys>)
               }
             </div>
-        </Tabs.Item>
-          {/*
-          <Tabs.Item title="Contacts">
-            Contacts content
-          </Tabs.Item>
-          <Tabs.Item
-            disabled={true}
-            title="Disabled"
-          >
-            Disabled content
-          </Tabs.Item> */}
-      </Tabs.Group>
+          </TabPanel>
+        </Tabs>
+
     </section>
 
     </div>

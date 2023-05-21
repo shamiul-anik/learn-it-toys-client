@@ -19,13 +19,13 @@ const AllToys = () => {
 
   useEffect(() => {
     // fetch(`http://localhost:5000/toys?limit=${limit}&sort=${sort}&search=${search}`)
-    fetch(`https://learn-it-toys-server.vercel.app/toys?limit=${limit}&sort=${sort}&search=${search}`)
+    fetch(`https://learn-it-toys-server.vercel.app/toys?limit=${limit}&sort=${sort}`)
       .then(res => res.json())
       .then(data => {
         setAllToys(data);
       })
     // console.log("Test");
-  }, [limit, sort, search]);
+  }, [limit, sort]);
 
   const handleSearch = (event) => {
     event.preventDefault();
