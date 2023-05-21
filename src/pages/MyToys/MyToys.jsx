@@ -4,6 +4,7 @@ import MyToysBanner from './MyToysBanner';
 import { useContext, useEffect, useState } from "react";
 import MySingleToy from "./MySingleToy";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   
@@ -25,12 +26,41 @@ const MyToys = () => {
       .then(data => {
         setMyToys(data);
       })
-    console.log("My Toys");
+    // console.log("My Toys");
   }, [limit, user_email, sort]);
 
   const handleDelete = (id)=> {
-    console.log(id);
-  }
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        console.log(id);
+
+        fetch(`http://localhost:5000/delete/${id}`, {
+          method: "DELETE",
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire(
+                'Deleted!',
+                'Toy data has been deleted.',
+                'success'
+              )
+              const remainingToys = myToys.filter(user => user._id !== id)
+              setMyToys(remainingToys);
+            }
+          });
+      }
+    })
+  };
 
 
   return (

@@ -27,9 +27,7 @@ const MySingleToy = ({ myToy, handleDelete }) => {
         <Link to={`/update/${_id}`}>
           <button type="button" className="flex w-24 justify-center items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-normal rounded-md text-md px-3 py-2 text-center">Update</button>
         </Link>
-        <Link onClick={() => handleDelete(`/delete/${_id}`)}>
-          <button type="button" className="mt-2 flex w-24 justify-center items-center text-white bg-gradient-to-br from-red-500 to-red-600 transition-all hover:duration-300 hover:from-red-600 hover:to-red-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-normal rounded-md text-md px-3 py-2 text-center">Delete</button>
-        </Link>
+        <button onClick={() => handleDelete(_id)} type="button" className="mt-2 flex w-24 justify-center items-center text-white bg-gradient-to-br from-red-500 to-red-600 transition-all hover:duration-300 hover:from-red-600 hover:to-red-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-normal rounded-md text-md px-3 py-2 text-center">Delete</button>
       </td>
     </tr>
   );
