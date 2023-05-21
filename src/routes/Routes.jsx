@@ -7,6 +7,7 @@ const ErrorPage = lazy(() => import("../pages/ErrorPage/ErrorPage"));
 const Home = lazy(() => import("../pages/Home/Home"));
 const AddAToy = lazy(() => import("../pages/AddAToy/AddAToy"));
 const UpdateAToy = lazy(() => import("../pages/UpdateAToy/UpdateAToy"));
+const ViewToy = lazy(() => import("../pages/ViewToy/ViewToy"));
 const Blog = lazy(() => import("../pages/Blog/Blog"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
 const About = lazy(() => import("../pages/About/About"));
@@ -38,11 +39,11 @@ export const router = createBrowserRouter([
 				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><MyToys></MyToys></PrivateRoute></Suspense>,
 				loader: () => fetch("http://localhost:5000/my-toys")
 			},
-			// {
-			// 	path: "/toys/:id",
-			// 	element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><RecipeDetails></RecipeDetails></PrivateRoute></Suspense>,
-			// 	loader: ({ params }) => fetch(`https://chef-world-server.vercel.app/recipes/${params.id}`)
-			// },
+			{
+				path: "/toy/:id",
+				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><ViewToy></ViewToy></PrivateRoute></Suspense>,
+				loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+			},
 			{
 				path: "/add-a-toy",
 				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><AddAToy></AddAToy></PrivateRoute></Suspense>,
