@@ -99,32 +99,6 @@ const MyToys = () => {
           </div>
         </div>
 
-        {/* <div className="flex md:flex-row justify-center md:justify-between">
-          <div className="form-control flex-row gap-2 mt-5 mb-6 mr-1">
-            <label className="label pl-0" htmlFor="showData">
-              <span className="label-text text-md md:text-[16px]">Number of Rows</span>
-            </label>
-            <select value={limit} onChange={(e) => setLimit(e.target.value)} id="showData" name="sub_category" className="select select-bordered select-sm min-h-[42px] leading-tight !text-[14px] !font-normal">
-              <option value="" disabled>Limit</option>
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
-            </select>
-          </div>
-          <div className="form-control flex-row gap-2 mt-5 mb-6 mr-1">
-            <label className="label pl-0" htmlFor="showData">
-              <span className="label-text text-md md:text-[16px]">Sort Order</span>
-            </label>
-            <select value={sort} onChange={(e) => setSort(e.target.value)} id="showData" name="sub_category" className="select select-bordered select-sm min-h-[42px] leading-tight !text-[14px] !font-normal">
-              <option value="" disabled>Select Order</option>
-              <option value="asc">Ascending</option>
-              <option value="desc">Descending</option>
-            </select>
-          </div>
-        </div> */}
-
         <div className="relative overflow-x-auto">
           <table className="border-2 border-slate-200 w-full text-sm text-left text-gray-1000 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
