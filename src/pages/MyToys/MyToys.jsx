@@ -76,19 +76,13 @@ const MyToys = () => {
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" className="text-center bg-gray-100 px-3 py-4">
-                  Seller Name
+                  Photo
                 </th>
                 <th scope="col" className="text-center bg-gray-100 px-3 py-4">
-                  Toy Name
+                  Toy Details
                 </th>
                 <th scope="col" className="text-center bg-gray-100 px-3 py-4">
-                  Sub-category
-                </th>
-                <th scope="col" className="text-center bg-gray-100 px-3 py-4">
-                  Price
-                </th>
-                <th scope="col" className="text-center bg-gray-100 px-3 py-4">
-                  Available Quantity
+                  Seller Details
                 </th>
                 <th scope="col" className="text-center bg-gray-100 px-3 py-4">
                   Action

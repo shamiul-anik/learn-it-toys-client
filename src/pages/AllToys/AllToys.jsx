@@ -21,7 +21,8 @@ const AllToys = () => {
       })
     console.log("Test");
   }, [limit]);
-
+  
+  console.log(allToys);
 
   return (
     <div>
