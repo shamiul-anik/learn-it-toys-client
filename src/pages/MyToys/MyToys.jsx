@@ -17,15 +17,16 @@ const MyToys = () => {
   // console.log(loadedData);
   const [myToys, setMyToys] = useState([]);
   const [limit, setLimit] = useState(20);
+  const [sort, setSort] = useState("asc");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toys?email=${user_email}&limit=${limit}`)
+    fetch(`http://localhost:5000/my-toys?email=${user_email}&limit=${limit}&sort=${sort}`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data);
       })
     console.log("My Toys");
-  }, [limit, user_email]);
+  }, [limit, user_email, sort]);
 
 
   return (
@@ -56,7 +57,7 @@ const MyToys = () => {
 
         <div className="relative overflow-x-auto">
           
-          <div className="flex w-full justify-center">
+          <div className="flex justify-between w-full">
             <div className="form-control flex-row gap-2 mt-5 mb-6 mr-1">
               <label className="label pl-0" htmlFor="showData">
                 <span className="label-text text-md md:text-[16px]">Number of Rows</span>
@@ -68,6 +69,16 @@ const MyToys = () => {
                 <option value="20">20</option>
                 <option value="50">50</option>
                 <option value="100">100</option>
+              </select>
+            </div>
+            <div className="form-control flex-row gap-2 mt-5 mb-6 mr-1">
+              <label className="label pl-0" htmlFor="showData">
+                <span className="label-text text-md md:text-[16px]">Sort Order</span>
+              </label>
+              <select value={sort} onChange={(e) => setSort(e.target.value)} id="showData" name="sub_category" className="select select-bordered select-sm min-h-[42px] leading-tight !text-[14px] !font-normal">
+                <option value="" disabled>Select Order</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
               </select>
             </div>
           </div>

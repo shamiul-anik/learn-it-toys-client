@@ -12,16 +12,16 @@ const MySingleToy = ({ myToy }) => {
         </div>
       </td>
       <td className="px-2 py-3 min-w-[550px]">
-        <p><span className="font-bold">Toy Name:</span> {toy_name}</p>
-        <p className="mt-2"><span className="font-bold">Sub Category:</span> {sub_category}</p>
-        <p className="mt-2"><span className="font-bold">Rating:</span> {rating}</p>
-        <p className="mt-2"><span className="font-bold">Price:</span> {price}</p>
-        <p className="mt-2"><span className="font-bold">Quantity:</span> {quantity}</p>
-        <p className="mt-2 text-justify"><span className="font-bold">Description:</span> {description}</p>
+        <p><span className="font-bold underline underline-offset-4">Toy Name:</span> {toy_name}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Sub Category:</span> {sub_category}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Rating:</span> {rating}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Price:</span> {price}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Quantity:</span> {quantity}</p>
+        <p className="mt-2 text-justify"><span className="font-bold underline underline-offset-4">Description:</span> {description}</p>
       </td>
       <td className="px-4 py-4 whitespace-nowrap">
-        <p><span className="font-bold">Seller Name:</span> {seller_name}</p>
-        <p className="mt-2"><span className="font-bold">Seller Emai:</span> {seller_email}</p>
+        <p><span className="font-bold underline underline-offset-4">Seller Name:</span> {seller_name}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Seller Email:</span> {seller_email}</p>
       </td>
       <td className="px-4 py-4 text-center">
         <Link to={`/update/${_id}`}>
