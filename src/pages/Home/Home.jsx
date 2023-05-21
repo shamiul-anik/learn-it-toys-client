@@ -37,14 +37,14 @@ const Home = () => {
       {/* Trending Toys */}
       <TrendingToys></TrendingToys>
 
-      {/* Discount */}
-      {/* <Discount></Discount> */}
-
       {/* Choose Us */}
       <ChooseUs></ChooseUs>
       
       {/* Testimonial */}
       <Testimonial></Testimonial>
+
+      {/* Discount */}
+      <Discount></Discount>
 
       {/* Subscribe to Our Newsletter */}
       <Newsletter></Newsletter>
