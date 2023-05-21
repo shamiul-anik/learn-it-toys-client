@@ -1,10 +1,10 @@
 import { useTitle } from "../../hooks/useTitle";
 import ContactBanner from "./ContactBanner";
 import Lottie from "lottie-react";
-import ContactUsImage from '../../assets/lottie/contact-us.json';
+import ContactUsLottie from '../../assets/lottie/contact-us.json';
 import { BsSend } from "react-icons/bs";
 
-const ContactUs = () => {
+const Contact = () => {
 
   useTitle("Contact Us");
 
@@ -24,7 +24,7 @@ const ContactUs = () => {
         </p>
       </div>
       <div className="max-w-[1190px] w-100 mx-auto">
-        <iframe className="border-2 border-slate-200 w-full h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1811708823325!2d90.41576684428637!3d23.780119352475314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79ebfc24eab%3A0xea7dab563f12457a!2sGulshan%201%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1684626393720!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="border-2 border-slate-200 w-full h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1811708823325!2d90.41576684428637!3d23.780119352475314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79ebfc24eab%3A0xea7dab563f12457a!2sGulshan%201%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1684626393720!5m2!1sen!2sbd" allowFullScreen="" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
 
@@ -38,7 +38,7 @@ const ContactUs = () => {
       </div>
       <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-4 md:mt-8 p-4">
         <div>
-          <Lottie className="max-w-xl mx-auto" animationData={ContactUsImage} loop={true} />
+          <Lottie className="max-w-xl mx-auto" animationData={ContactUsLottie} loop={true} />
         </div>
 
         <div className="flex max-w-xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
@@ -91,4 +91,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;

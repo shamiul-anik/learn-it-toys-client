@@ -8,8 +8,8 @@ const Home = lazy(() => import("../pages/Home/Home"));
 const AddAToy = lazy(() => import("../pages/AddAToy/AddAToy"));
 const UpdateAToy = lazy(() => import("../pages/UpdateAToy/UpdateAToy"));
 const Blog = lazy(() => import("../pages/Blog/Blog"));
-const ContactUs = lazy(() => import("../pages/ContactUs/ContactUs"));
-// const About = lazy(() => import("../pages/About/About"));
+const Contact = lazy(() => import("../pages/Contact/Contact"));
+const About = lazy(() => import("../pages/About/About"));
 // const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
 const Login = lazy(() => import("../pages/Authentication/Login/Login"));
@@ -62,13 +62,13 @@ export const router = createBrowserRouter([
 				element: <Suspense fallback={<Loader></Loader>}><Blog></Blog></Suspense>
 			},
 			{
-				path: 'contact-us',
-				element: <Suspense fallback={<Loader></Loader>}><ContactUs></ContactUs></Suspense>
+				path: 'contact',
+				element: <Suspense fallback={<Loader></Loader>}><Contact></Contact></Suspense>
 			},
-			// {
-			// 	path: 'about',
-			// 	element: <Suspense fallback={<Loader></Loader>}><About></About></Suspense>
-			// }
+			{
+				path: 'about',
+				element: <Suspense fallback={<Loader></Loader>}><About></About></Suspense>
+			}
 		]
 	}
 ]);
