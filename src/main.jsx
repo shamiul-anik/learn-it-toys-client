@@ -5,6 +5,7 @@ import { router } from './routes/Routes.jsx';
 import { ToastContainer, Zoom } from 'react-toastify';
 import AuthProvider from './providers/AuthProvider.jsx';
 import 'react-toastify/dist/ReactToastify.css';
+import '@smastrom/react-rating/style.css';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

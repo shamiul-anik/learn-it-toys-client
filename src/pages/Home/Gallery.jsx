@@ -58,7 +58,7 @@ const Gallery = () => {
           </div>
         </div> */}
 
-        <div className="h-56 md:h-80 xl:h-[550px]">
+        <div className="h-56 md:h-80 xl:h-[450px]">
           <Carousel slideInterval={3000}>
             <img
               src="https://i.ibb.co/zXFnRd7/gallery-image1.jpg"

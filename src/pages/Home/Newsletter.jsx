@@ -3,10 +3,15 @@ import { BsFillSendFill } from "react-icons/bs";
 const Newsletter = () => {
   return (
     <section className="max-w-7xl mx-auto mt-12 lg:mt-20">
-      <div className="mx-4 p-6 lg:p-12 rounded-lg border-2 border-slate-200 mt-6">
+      <div>
         <header>
-          <h2 className="content-title text-center">Stay in the Loop with LearnitToys Newsletter!</h2>
+          <h2 className="content-title text-center">Newsletter</h2>
         </header>
+        <p className="content-description text-center mt-2">
+          Stay in the loop by subscribing to our Newsletter!
+        </p>
+      </div>
+      <div className="mx-4 p-6 lg:p-12 rounded-lg border-2 border-slate-200 mt-6">
         <p className='content-description text-center'>Sign up for our newsletter and be the first to know about the latest educational toys, exclusive offers, and exciting updates from LearnitToys. Our newsletter is packed with valuable insights, educational resources, and tips to enhance your child's learning journey.</p>
         <p className='content-description text-center mt-2'>Join our growing community of parents, educators, and toy enthusiasts who believe in the power of educational play. <br /> Simply enter your email address below and click 'Subscribe' to start receiving our informative and inspiring newsletter.</p>
         <p className='content-description text-center mt-2 mb-6'>Don't miss out on the opportunity to provide your child with the best educational toys and resources. <br /> <br /> Subscribe to the LearnitToys newsletter today!</p>
