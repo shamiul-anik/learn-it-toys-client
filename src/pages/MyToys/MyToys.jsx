@@ -21,7 +21,7 @@ const MyToys = () => {
   const [sort, setSort] = useState("asc");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/my-toys?email=${user_email}&limit=${limit}&sort=${sort}`)
+    fetch(`https://learn-it-toys-server.vercel.app/my-toys?email=${user_email}&limit=${limit}&sort=${sort}`)
       .then(res => res.json())
       .then(data => {
         setMyToys(data);
@@ -42,7 +42,7 @@ const MyToys = () => {
       if (result.isConfirmed) {
         console.log(id);
 
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://learn-it-toys-server.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then(res => res.json())

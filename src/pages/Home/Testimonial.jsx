@@ -3,10 +3,10 @@ const Testimonial = () => {
   return (
     <div>
       <section className="max-w-7xl mx-auto mt-12 lg:mt-32 p-4 md:px-0">
-        <header>
+        <header data-aos="fade-down">
           <h2 className="content-title text-center">Testimonial</h2>
         </header>
-        <p className="content-description text-center mt-2">
+        <p className="content-description text-center mt-2" data-aos="fade-up">
           Check out what our customers says about us.
         </p>
 

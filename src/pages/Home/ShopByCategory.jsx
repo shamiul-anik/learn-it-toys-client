@@ -11,7 +11,7 @@ const ShopByCategory = () => {
   const [scienceToys, setScienceToys] = useState([]);
 
   // useEffect(() => {
-  //   fetch('http://localhost:5000/toys')
+  //   fetch('https://learn-it-toys-server.vercel.app/toys')
   //   .then(res => res.json())
   //   .then(data => {
   //     // setAllToys(data);
@@ -35,7 +35,7 @@ const ShopByCategory = () => {
     <div className="mt-16 md:mt-24">
 
       <div className="max-w-7xl p-4 mx-auto">
-        <header>
+        <header data-aos="fade-down">
           <h2 className="content-title text-center">Shop By Category</h2>
         </header>
         <p className="content-description text-center mt-2">

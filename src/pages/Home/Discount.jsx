@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Discount = () => {
   return (
     <section className="mt-16 md:mt-22 max-w-7xl p-4 mx-auto rounded-lg bg-white dark:bg-gray-900">
-      <header>
+      <header data-aos="fade-up">
         <h2 className="content-title text-center">Discount</h2>
       </header>
-      <p className="content-description text-center mt-2">
+      <p className="content-description text-center mt-2" data-aos="fade-down">
         Check out the hot offers in LearnitToys!
       </p>
       

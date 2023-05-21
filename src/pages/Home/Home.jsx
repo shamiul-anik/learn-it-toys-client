@@ -9,10 +9,16 @@ import Testimonial from './Testimonial';
 import Discount from './Discount';
 import ChooseUs from './ChooseUs';
 import ShopByCategory from './ShopByCategory';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   
   useTitle("Home");
+
+  useEffect(()=> {
+    Aos.init({duration: 1000});
+  }, [])
 
   // const toysLoadedData = useLoaderData();
   // const [toyDetails, setToyDetails] = useState([]);
@@ -37,7 +43,7 @@ const Home = () => {
       
       {/* Latest Toys */}
       <LatestToys></LatestToys>
-      
+    
       {/* Trending Toys */}
       <TrendingToys></TrendingToys>
 

@@ -113,7 +113,7 @@ const UpdateAToy = () => {
       const toy = { toy_name, photo_url, seller_name, seller_email, sub_category, rating, price, quantity, description };
       console.log("toy:", toy);
 
-      fetch(`http://localhost:5000/update/${loadedToy._id}`, {
+      fetch(`https://learn-it-toys-server.vercel.app/update/${loadedToy._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

@@ -6,10 +6,10 @@ import { MdAccessTime } from "react-icons/md";
 const ChooseUs = () => {
   return (
     <section className="max-w-7xl mx-auto mt-12 lg:mt-32 p-4 md:px-0">
-      <header>
+      <header data-aos="fade-down">
         <h2 className="content-title text-center">Why Choose Us</h2>
       </header>
-      <p className="content-description text-center mt-2">
+      <p className="content-description text-center mt-2" data-aos="fade-up">
         Discover the reasons for choosing our toys!
       </p>
 

@@ -30,3 +30,4 @@ https://learn-it-toys.web.app/
 17. Social login functionality added using Google.
 18. React lazy load added for better user experience and optimization.
 19. Contact and About page added as extra features.
+20. AOS animation added on different sections of home page.

@@ -32,17 +32,17 @@ export const router = createBrowserRouter([
 			{
 				path: "/all-toys",
 				element: <Suspense fallback={<Loader></Loader>}><AllToys></AllToys></Suspense>,
-				// loader: () => fetch("http://localhost:5000/toys")
+				// loader: () => fetch("https://learn-it-toys-server.vercel.app/toys")
 			},
 			{
 				path: "/my-toys",
 				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><MyToys></MyToys></PrivateRoute></Suspense>,
-				loader: () => fetch("http://localhost:5000/my-toys")
+				loader: () => fetch("https://learn-it-toys-server.vercel.app/my-toys")
 			},
 			{
 				path: "/toy/:id",
 				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><ViewToy></ViewToy></PrivateRoute></Suspense>,
-				loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+				loader: ({ params }) => fetch(`https://learn-it-toys-server.vercel.app/toy/${params.id}`)
 			},
 			{
 				path: "/add-a-toy",
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
 			{
 				path: "/update/:id",
 				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><UpdateAToy></UpdateAToy></PrivateRoute></Suspense>,
-				loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+				loader: ({ params }) => fetch(`https://learn-it-toys-server.vercel.app/toy/${params.id}`)
 			},
 			{
 				path: 'login',

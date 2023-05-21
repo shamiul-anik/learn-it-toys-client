@@ -4,10 +4,10 @@ const Gallery = () => {
   return (
     <div>
       <section className="max-w-7xl mx-auto mt-12 lg:mt-24 p-4 md:px-0">
-        <header>
+        <header data-aos="fade-up">
           <h2 className="content-title text-center">Gallery</h2>
         </header>
-        <p className="content-description text-center mt-2 mb-8 md:mb-12">
+        <p className="content-description text-center mt-2 mb-8 md:mb-12" data-aos="fade-down">
           Discover a world of educational toys in our gallery!
         </p>
 

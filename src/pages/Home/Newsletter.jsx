@@ -4,10 +4,10 @@ const Newsletter = () => {
   return (
     <section className="max-w-7xl mx-auto mt-12 lg:mt-20">
       <div>
-        <header>
+        <header data-aos="fade-up">
           <h2 className="content-title text-center">Newsletter</h2>
         </header>
-        <p className="content-description text-center mt-2">
+        <p className="content-description text-center mt-2" data-aos="fade-down">
           Stay in the loop by subscribing to our Newsletter!
         </p>
       </div>
