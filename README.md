@@ -32,3 +32,4 @@ https://learn-it-toys.web.app/
 19. Contact and About page added as extra features.
 20. AOS animation added on different sections of home page.
 21. Search functionality added on All Toys page. Keep the input empty to search all toy data from the database. You must give precise name as input to find the toy data.
+22. Home page sub category section added with dynamic data.
