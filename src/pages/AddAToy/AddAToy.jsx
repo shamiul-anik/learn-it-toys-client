@@ -146,7 +146,7 @@ const AddAToy = () => {
           <Lottie className="max-w-xl mx-auto" animationData={AddToy} loop={true} />
         </div>
 
-        <div className="flex max-w-3xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 box-shadow-custom">
+        <div className="flex max-w-3xl card card-compact w-full bg-base-100 px-0 md:px-4 py-2 md:py-7 border-2 border-slate-200">
 
           {/* <div className="flex-1 p-6 md:p-8 pt-5 pb-1 md:pb-2">
             <h3 className='text-slate-700 text-2xl my-2 font-bold text-center'>Enter Toy Details</h3>

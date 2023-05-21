@@ -271,84 +271,72 @@ function App() {
         </div>
       </section>
 
-      // Accordion
-      <Accordion className='max-w-7xl mx-auto my-16'>
-        <Accordion.Panel>
-          <Accordion.Title>
-            What is Flowbite?
-          </Accordion.Title>
-          <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Check out this guide to learn how to
-              <a
-                href="https://flowbite.com/docs/getting-started/introduction/"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                get started
-              </a>
-              and start developing websites even faster with components on top of Tailwind CSS.
-            </p>
-          </Accordion.Content>
-        </Accordion.Panel>
-        <Accordion.Panel>
-          <Accordion.Title>
-            Is there a Figma file available?
-          </Accordion.Title>
-          <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Check out the
-              <a
-                href="https://flowbite.com/figma/"
-                className="text-blue-600 hover:underline dark:text-blue-500"
-              >
-                Figma design system
-              </a>
-              based on the utility classes from Tailwind CSS and components from Flowbite.
-            </p>
-          </Accordion.Content>
-        </Accordion.Panel>
-        <Accordion.Panel>
-          <Accordion.Title>
-            What are the differences between Flowbite and Tailwind UI?
-          </Accordion.Title>
-          <Accordion.Content>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.
-            </p>
-            <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Learn more about these technologies:
-            </p>
-            <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-              <li>
-                <a
-                  href="https://flowbite.com/pro/"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Flowbite Pro
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tailwindui.com/"
-                  rel="nofollow"
-                  className="text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Tailwind UI
-                </a>
-              </li>
-            </ul>
-          </Accordion.Content>
-        </Accordion.Panel>
-      </Accordion>
+      // Table
+      <div className="relative overflow-x-auto">
+          <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Product name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Color
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Category
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Apple MacBook Pro 17"
+                </th>
+                <td className="px-6 py-4">
+                  Silver
+                </td>
+                <td className="px-6 py-4">
+                  Laptop
+                </td>
+                <td className="px-6 py-4">
+                  $2999
+                </td>
+              </tr>
+              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Microsoft Surface Pro
+                </th>
+                <td className="px-6 py-4">
+                  White
+                </td>
+                <td className="px-6 py-4">
+                  Laptop PC
+                </td>
+                <td className="px-6 py-4">
+                  $1999
+                </td>
+              </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  Magic Mouse 2
+                </th>
+                <td className="px-6 py-4">
+                  Black
+                </td>
+                <td className="px-6 py-4">
+                  Accessories
+                </td>
+                <td className="px-6 py-4">
+                  $99
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
 */}
      
 

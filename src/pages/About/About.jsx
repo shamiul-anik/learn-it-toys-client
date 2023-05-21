@@ -1,6 +1,7 @@
 import { Accordion } from 'flowbite-react';
 import { useTitle } from '../../hooks/useTitle';
 import AboutBanner from './AboutBanner';
+import FAQsImage from '../../assets/images/faqs.jpg'
 import { Link } from 'react-router-dom';
 
 const About = () => {
@@ -46,68 +47,73 @@ const About = () => {
 						Are you looking for some answers? Check for finding out more information!
 					</p>
 				</div>
-				<Accordion className='max-w-7xl mx-auto mb-4 md:mb-8'>
-					<Accordion.Panel>
-						<Accordion.Title>
-							Are the toys at LearnitToys safe for children?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								Absolutely! At LearnitToys, safety is our top priority. We carefully select toys that meet stringent safety standards and regulations. Each toy undergoes thorough testing to ensure it is free from harmful substances and designed with child safety in mind.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-					<Accordion.Panel>
-						<Accordion.Title>
-							How can educational toys benefit my child's learning?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								Educational toys play a crucial role in a child's development. They foster essential skills such as problem-solving, creativity, critical thinking, and language development. These toys provide hands-on experiences that engage children actively, making learning fun and meaningful.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-					<Accordion.Panel>
-						<Accordion.Title>
-							What age range do the educational toys cater to?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								LearnitToys offers a wide range of educational toys suitable for various age groups, starting from infants to older children. Our collection is carefully categorized, making it easier for you to find toys that align with your child's age and developmental stage.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-					<Accordion.Panel>
-						<Accordion.Title>
-							Can you recommend toys for specific subjects or skills?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								Certainly! We have a diverse selection of toys that cater to various subjects and skills. Whether you're looking for STEM toys, language development tools, or arts and crafts materials, we have you covered. Explore our website or reach out to our customer support for personalized recommendations.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-					<Accordion.Panel>
-						<Accordion.Title>
-							Do you offer gift options and wrapping services?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								Yes, we understand the joy of gifting. LearnitToys provides gift options and wrapping services for your convenience. Simply select the desired gift-wrapping option during the checkout process, and we'll ensure your order is beautifully packaged for that special occasion.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-					<Accordion.Panel>
-						<Accordion.Title>
-							What if I have a question or need assistance with my order?
-						</Accordion.Title>
-						<Accordion.Content>
-							<p className="mb-2 text-gray-500 dark:text-gray-400">
-								We're here to help! If you have any questions or require assistance with your order, our friendly customer support team is just a click or call away. Feel free to reach out to us, and we'll be more than happy to assist you.
-							</p>
-						</Accordion.Content>
-					</Accordion.Panel>
-				</Accordion>
+				<div className="grid md:grid-cols-5 gap-2 md:gap-4 items-center mb-4">
+					<Accordion className='col-span-3 max-w-7xl mx-auto mb-4 md:mb-8 border-2 border-slate-200'>
+						<Accordion.Panel>
+							<Accordion.Title>
+								Are the toys at LearnitToys safe for children?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									Absolutely! At LearnitToys, safety is our top priority. We carefully select toys that meet stringent safety standards and regulations. Each toy undergoes thorough testing to ensure it is free from harmful substances and designed with child safety in mind.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+						<Accordion.Panel>
+							<Accordion.Title>
+								How can educational toys benefit my child's learning?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									Educational toys play a crucial role in a child's development. They foster essential skills such as problem-solving, creativity, critical thinking, and language development. These toys provide hands-on experiences that engage children actively, making learning fun and meaningful.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+						<Accordion.Panel>
+							<Accordion.Title>
+								What age range do the educational toys cater to?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									LearnitToys offers a wide range of educational toys suitable for various age groups, starting from infants to older children. Our collection is carefully categorized, making it easier for you to find toys that align with your child's age and developmental stage.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+						<Accordion.Panel>
+							<Accordion.Title>
+								Can you recommend toys for specific subjects or skills?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									Certainly! We have a diverse selection of toys that cater to various subjects and skills. Whether you're looking for STEM toys, language development tools, or arts and crafts materials, we have you covered. Explore our website or reach out to our customer support for personalized recommendations.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+						<Accordion.Panel>
+							<Accordion.Title>
+								Do you offer gift options and wrapping services?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									Yes, we understand the joy of gifting. LearnitToys provides gift options and wrapping services for your convenience. Simply select the desired gift-wrapping option during the checkout process, and we'll ensure your order is beautifully packaged for that special occasion.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+						<Accordion.Panel>
+							<Accordion.Title>
+								What if I have a question or need assistance with my order?
+							</Accordion.Title>
+							<Accordion.Content>
+								<p className="mb-2 text-gray-500 dark:text-gray-400">
+									We're here to help! If you have any questions or require assistance with your order, our friendly customer support team is just a click or call away. Feel free to reach out to us, and we'll be more than happy to assist you.
+								</p>
+							</Accordion.Content>
+						</Accordion.Panel>
+					</Accordion>
+					<div className='col-span-2'>
+						<img className="w-full min-w-[350px]" src={FAQsImage} alt="FAQs Image" />
+					</div>
+				</div>
 				<div>
 					Have a question that's not listed here?
 					<Link
