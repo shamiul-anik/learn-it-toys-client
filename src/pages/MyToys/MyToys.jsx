@@ -1,38 +1,43 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { useTitle } from '../../hooks/useTitle';
-import AllToyBanner from './AllToyBanner';
-import { useEffect, useState } from "react";
-import SingleToy from "./SingleToy";
+import MyToysBanner from './MyToysBanner';
+import { useContext, useEffect, useState } from "react";
+import MySingleToy from "./MySingleToy";
+import { AuthContext } from "../../providers/AuthProvider";
 
-const AllToys = () => {
+const MyToys = () => {
   
-  useTitle("All Toys");
+  useTitle("My Toys");
+
+  const { user } = useContext(AuthContext);
+
+  const user_email = user?.email;
 
   // const loadedData = useLoaderData();
   // console.log(loadedData);
-  const [allToys, setAllToys] = useState([]);
+  const [myToys, setMyToys] = useState([]);
   const [limit, setLimit] = useState(20);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?limit=${limit}`)
+    fetch(`http://localhost:5000/my-toys?email=${user_email}&limit=${limit}`)
       .then(res => res.json())
       .then(data => {
-        setAllToys(data);
+        setMyToys(data);
       })
-    console.log("Test");
-  }, [limit]);
+    console.log("My Toys");
+  }, [limit, user_email]);
 
 
   return (
     <div>
 
-      {/* All Toy Banner */}
-      <AllToyBanner></AllToyBanner>
+      {/* My Toy Banner */}
+      <MyToysBanner></MyToysBanner>
 
       <section className="max-w-7xl mx-auto mt-12 lg:mt-32 p-4 md:px-0">
         
         {/* Search */}
-        <div className="w-full mx-auto md:w-1/2">
+        {/* <div className="w-full mx-auto md:w-1/2">
           <form className="flex gap-2 items-center">
             <label htmlFor="searchToyName" className="sr-only">Search Toy Name</label>
             <div className="relative w-full">
@@ -47,9 +52,10 @@ const AllToys = () => {
               <button type="button" className="flex w-32 justify-center items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-normal rounded-md text-md px-3 py-2 text-center">Search</button>
             </Link>
           </form>
-        </div>
+        </div> */}
 
         <div className="relative overflow-x-auto">
+          
           <div className="flex w-full justify-center">
             <div className="form-control flex-row gap-2 mt-5 mb-6 mr-1">
               <label className="label pl-0" htmlFor="showData">
@@ -91,7 +97,7 @@ const AllToys = () => {
             </thead>
             <tbody>
               {
-                allToys.map(toy => <SingleToy key={toy._id} toy={toy}></SingleToy>)
+                myToys.map(myToy => <MySingleToy key={myToy._id} myToy={myToy}></MySingleToy>)
               }
             </tbody>
           </table>
@@ -102,4 +108,4 @@ const AllToys = () => {
     </div>
   );
 };
-export default AllToys;
+export default MyToys;

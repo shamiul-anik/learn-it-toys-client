@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const MySingleToy = ({ toy }) => {
+const MySingleToy = ({ myToy }) => {
 
-  const { _id, seller_name, toy_name, sub_category, price, quantity } = toy;
+  const { _id, seller_name, toy_name, sub_category, price, quantity } = myToy;
 
   return (
     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">

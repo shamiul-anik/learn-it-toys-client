@@ -11,6 +11,7 @@ const Blog = lazy(() => import("../pages/Blog/Blog"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
 const About = lazy(() => import("../pages/About/About"));
 const AllToys = lazy(() => import("../pages/AllToys/AllToys"));
+const MyToys = lazy(() => import("../pages/MyToys/MyToys"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
 const Login = lazy(() => import("../pages/Authentication/Login/Login"));
 const Registration = lazy(() => import("../pages/Authentication/Registration/Registration"));
@@ -30,7 +31,12 @@ export const router = createBrowserRouter([
 			{
 				path: "/all-toys",
 				element: <Suspense fallback={<Loader></Loader>}><AllToys></AllToys></Suspense>,
-				loader: () => fetch("http://localhost:5000/toys")
+				// loader: () => fetch("http://localhost:5000/toys")
+			},
+			{
+				path: "/my-toys",
+				element: <Suspense fallback={<Loader></Loader>}><PrivateRoute><MyToys></MyToys></PrivateRoute></Suspense>,
+				loader: () => fetch("http://localhost:5000/my-toys")
 			},
 			// {
 			// 	path: "/toys/:id",
