@@ -10,7 +10,7 @@ const UpdateAToy = lazy(() => import("../pages/UpdateAToy/UpdateAToy"));
 const Blog = lazy(() => import("../pages/Blog/Blog"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
 const About = lazy(() => import("../pages/About/About"));
-// const ToyDetails = lazy(() => import("../pages/ToyDetails/ToyDetails"));
+const AllToys = lazy(() => import("../pages/AllToys/AllToys"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
 const Login = lazy(() => import("../pages/Authentication/Login/Login"));
 const Registration = lazy(() => import("../pages/Authentication/Registration/Registration"));
@@ -26,6 +26,11 @@ export const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Suspense fallback={<Loader></Loader>}><Home></Home></Suspense>,
+			},
+			{
+				path: "/all-toys",
+				element: <Suspense fallback={<Loader></Loader>}><AllToys></AllToys></Suspense>,
+				loader: () => fetch("http://localhost:5000/toys")
 			},
 			// {
 			// 	path: "/toys/:id",

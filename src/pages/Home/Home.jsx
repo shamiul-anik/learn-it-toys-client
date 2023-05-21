@@ -8,6 +8,7 @@ import Gallery from './Gallery';
 import Testimonial from './Testimonial';
 import Discount from './Discount';
 import ChooseUs from './ChooseUs';
+import ShopByCategory from './ShopByCategory';
 
 const Home = () => {
   
@@ -30,6 +31,9 @@ const Home = () => {
 
       {/* Gallery */}
       <Gallery></Gallery>
+
+      {/* Shop By Category */}
+      <ShopByCategory></ShopByCategory>
       
       {/* Latest Toys */}
       <LatestToys></LatestToys>
