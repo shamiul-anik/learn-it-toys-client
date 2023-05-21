@@ -13,6 +13,8 @@ const AllToys = () => {
   const [allToys, setAllToys] = useState([]);
   const [limit, setLimit] = useState(20);
   const [sort, setSort] = useState("asc");
+  // const [search, setSearch] = useState("");
+
 
   useEffect(() => {
     fetch(`http://localhost:5000/toys?limit=${limit}&sort=${sort}`)
@@ -22,6 +24,17 @@ const AllToys = () => {
       })
     console.log("Test");
   }, [limit, sort]);
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    console.log("Search button clicked!");
+    // alert("Search button clicked!")
+    // fetch(`http://localhost:5000/toys?search=${search}`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     setAllToys(data);
+    //   })
+  };
   
   console.log(allToys);
 
@@ -36,17 +49,17 @@ const AllToys = () => {
         {/* Search */}
         <div className="w-full mx-auto md:w-1/2">
           <form className="flex gap-2 items-center">
-            <label htmlFor="searchToyName" className="sr-only">Search Toy Name</label>
+            <label htmlFor="searchToyName" className="sr-only">Search by Toy Name</label>
             <div className="relative w-full">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                 </svg>
               </div>
-              <input type="text" id="searchToyName" className="block w-full p-2 pl-10 text-sm text-slate-800 border border-slate-300 rounded-lg bg-slate-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search by Toy Name" />
+              <input onChange={(e) => setSearch(e.target.value)} type="text" id="searchToyName" className="block w-full p-2 pl-10 text-sm text-slate-800 border border-slate-300 rounded-lg bg-slate-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search by Toy Name" />
             </div>
             <Link>
-              <button type="button" className="flex w-32 justify-center items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-normal rounded-md text-md px-3 py-2 text-center">Search</button>
+              <button onClick={handleSearch} type="button" className="flex w-32 justify-center items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-normal rounded-md text-md px-3 py-2 text-center">Search</button>
             </Link>
           </form>
         </div>

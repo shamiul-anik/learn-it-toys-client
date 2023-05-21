@@ -4,7 +4,8 @@ import { AuthContext } from '../../providers/AuthProvider';
 import UpdateToyBanner from './UpdateToyBanner';
 import UpdateToyImage from '../../assets/images/update-a-toy.png';
 import { toast } from 'react-toastify';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 
 const UpdateAToy = () => {
@@ -139,7 +140,15 @@ const UpdateAToy = () => {
       {/* Update Toy Banner */}
       <UpdateToyBanner></UpdateToyBanner>
 
-      <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-6 lg:mt-20 p-4">
+      <div className='max-w-7xl mx-auto mt-4 lg:mt-12 '>
+        <Link to="/my-toys" className="relative flex w-56 items-center justify-center p-0.5 overflow-hidden text-md font-semibold text-blue-700 rounded-lg group bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-blue-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <span className="flex items-center justify-center w-full px-3 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg group-hover:bg-opacity-0">
+            <FaArrowLeft className="mr-2 self-center" /> Back to My Toys
+          </span>
+        </Link>
+      </div>
+
+      <section className="flex flex-col md:flex-row gap-4 md:gap-16 items-center max-w-7xl mx-auto mt-4 lg:mt-8 p-4">
         <div>
           <img className="w-full min-w-[350px] max-w-xl rounded-xl image-full" src={loadedToy.photo_url ? loadedToy.photo_url : UpdateToyImage} alt={loadedToy?.photo_url ? "Toy Image" : "Update Toy Image"} />
         </div>
