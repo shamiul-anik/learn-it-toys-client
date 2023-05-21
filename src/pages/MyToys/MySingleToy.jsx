@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const MySingleToy = ({ myToy }) => {
+const MySingleToy = ({ myToy, handleDelete }) => {
 
   const { _id, photo_url, toy_name, seller_name, seller_email, sub_category, rating, price, quantity, description } = myToy;
 
@@ -15,7 +15,7 @@ const MySingleToy = ({ myToy }) => {
         <p><span className="font-bold underline underline-offset-4">Toy Name:</span> {toy_name}</p>
         <p className="mt-2"><span className="font-bold underline underline-offset-4">Sub Category:</span> {sub_category}</p>
         <p className="mt-2"><span className="font-bold underline underline-offset-4">Rating:</span> {rating}</p>
-        <p className="mt-2"><span className="font-bold underline underline-offset-4">Price:</span> {price}</p>
+        <p className="mt-2"><span className="font-bold underline underline-offset-4">Price:</span> ${price}</p>
         <p className="mt-2"><span className="font-bold underline underline-offset-4">Quantity:</span> {quantity}</p>
         <p className="mt-2 text-justify"><span className="font-bold underline underline-offset-4">Description:</span> {description}</p>
       </td>
@@ -27,7 +27,7 @@ const MySingleToy = ({ myToy }) => {
         <Link to={`/update/${_id}`}>
           <button type="button" className="flex w-24 justify-center items-center text-white bg-gradient-to-br from-blue-500 to-blue-600 transition-all hover:duration-300 hover:from-blue-600 hover:to-blue-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-800 font-normal rounded-md text-md px-3 py-2 text-center">Update</button>
         </Link>
-        <Link to={`/delete/${_id}`}>
+        <Link onClick={() => handleDelete(`/delete/${_id}`)}>
           <button type="button" className="mt-2 flex w-24 justify-center items-center text-white bg-gradient-to-br from-red-500 to-red-600 transition-all hover:duration-300 hover:from-red-600 hover:to-red-700 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-red-200 dark:focus:ring-red-800 font-normal rounded-md text-md px-3 py-2 text-center">Delete</button>
         </Link>
       </td>

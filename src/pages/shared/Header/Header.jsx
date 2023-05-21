@@ -39,7 +39,7 @@ const Header = () => {
 
 	return (
 		<div className="bg-gradient-to-tr from-blue-900 to-[#0D0A25] py-2">
-			<nav className={`navbar gap-4 ${user ? 'justify-center' : ''} max-w-7xl mx-auto`}>
+			<nav className={`navbar gap-4 ${user ? 'justify-between' : ''} max-w-7xl mx-auto`}>
 				<div className="navbar-start w-auto">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost text-slate-100 lg:hidden">
@@ -98,7 +98,7 @@ const Header = () => {
 					user && (
 						<div className="navbar-end w-auto mr-1 md:hidden">
 							<div className="dropdown dropdown-end mt-1">
-								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
+								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={currentUserName}>
 									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-blue-400">
 										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
 									</div>
@@ -183,7 +183,7 @@ const Header = () => {
 					{
 						user && (
 							<div className="dropdown dropdown-end mt-1 ml-6">
-								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={currentUserName}>
+								<label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={currentUserName}>
 									<div className="w-10 rounded-full ring-2 ring-offset-2 ring-blue-400">
 										<img className='object-top' src={currentUserPhotoURL} alt={currentUserName} />
 									</div>

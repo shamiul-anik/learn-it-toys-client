@@ -23,8 +23,8 @@ const Contact = () => {
           Check out the map for finding our location.
         </p>
       </div>
-      <div className="max-w-[1190px] w-100 mx-auto">
-        <iframe className="border-2 border-slate-200 w-full h-[500px] rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1811708823325!2d90.41576684428637!3d23.780119352475314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79ebfc24eab%3A0xea7dab563f12457a!2sGulshan%201%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1684626393720!5m2!1sen!2sbd" allowFullScreen="" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <div className="max-w-[1190px] w-100 px-4 mx-auto">
+        <iframe className="border-2 border-slate-200 w-full h-[300px] md:h-[500px] rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1811708823325!2d90.41576684428637!3d23.780119352475314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79ebfc24eab%3A0xea7dab563f12457a!2sGulshan%201%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1684626393720!5m2!1sen!2sbd" allowFullScreen="" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
 
