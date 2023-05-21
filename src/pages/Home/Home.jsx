@@ -20,15 +20,6 @@ const Home = () => {
     Aos.init({duration: 1000});
   }, [])
 
-  // const toysLoadedData = useLoaderData();
-  // const [toyDetails, setToyDetails] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('')
-  //   .then(res => res.json())
-  //     .then(data => setToyDetails(data))
-  // }, []);
-
   return (
     <div>
 
