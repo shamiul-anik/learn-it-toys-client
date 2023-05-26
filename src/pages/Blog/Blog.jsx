@@ -59,6 +59,7 @@ const Blog = () => {
               On the client-side, access tokens are usually stored in a safe place like cookies or the browser's local storage. These storage options make sure that the tokens are not easily accessible to others. It is important to store them securely to prevent unauthorized access.
             </div>
           </div>
+          
 
           <div className="divider mt-8"></div>
 

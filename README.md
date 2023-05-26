@@ -7,7 +7,30 @@ At LearnitToys, we believe that education should be fun and engaging. Our carefu
 Explore our collection today and embark on a journey of endless discovery with LearnitToys- Where Learning Comes to Life!
 
 ## Live Website Link: 
-https://learn-it-toys.web.app/
+#### Google Firebase: https://learn-it-toys.web.app/
+#### Netlify: https://learn-it-toys.netlify.app/
+
+### Note: 
+If you can't see the data in the website, please try reloading for few times. 
+As it's deployed using vercel's free plan, it might not be available for all the time.
+For example- I check it by visiting this link- https://learn-it-toys-server.vercel.app/toys and continue reloading until I get the data in the browser. 
+If data is visible, then try again from the website. It should work then.
+
+## Server Side Code
+https://github.com/shamiul-anik/learn-it-toys-server
+
+
+## API Links
+
+### All Toys Details :
+#### Vercel : https://learn-it-toys-server.vercel.app/toys
+#### Railway : https://learn-it-toys-server.up.railway.app/toys
+#### Cyclic : https://pear-whale-kit.cyclic.app/toys
+
+
+### Single Toy Details :
+https://learn-it-toys-server.vercel.app/toy/id 
+#### Example: https://learn-it-toys-server.vercel.app/toy/64690c365b00781f59754e61
 
 
 ## Features of this Project
@@ -30,6 +53,105 @@ https://learn-it-toys.web.app/
 17. Social login functionality added using Google.
 18. React lazy load added for better user experience and optimization.
 19. Contact and About page added as extra features.
-20. AOS animation added on different sections of home page.
-21. Search functionality added on All Toys page. Keep the input empty to search all toy data from the database. You must give precise name as input to find the toy data.
-22. Home page sub category section added with dynamic data.
+20. AOS animation added on different sections of Home page.
+21. Search functionality added on All Toys and My Toys page. Indexing is used in Toy Name and Seller Name for better search experience.
+22. Home page Sub-category section added with dynamic data loading on click from database.
+
+
+## Packages/Services/Font Used:
+<table>
+  <thead>
+    <tr>
+      <th>Serial No.</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td>React-pdf</td>
+      <td>https://react-pdf.org/</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td>Tailwind CSS</td>
+      <td>https://tailwindcss.com/</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td>daisyUI</td>
+      <td>https://daisyui.com/</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td>Flowbite</td>
+      <td>https://flowbite.com/docs/getting-started/react/</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td>React Icons</td>
+      <td>https://react-icons.github.io/react-icons</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td>React Rating</td>
+      <td>https://react-rating.onrender.com/</td>
+    </tr>
+    <tr>
+      <td align="center">7</td>
+      <td>React Router</td>
+      <td>https://reactrouter.com/en/main</td>
+    </tr>
+    <tr>
+      <td align="center">8</td>
+      <td>Firebase</td>
+      <td>https://firebase.google.com</td>
+    </tr>
+    <tr>
+      <td align="center">9</td>
+      <td>Google Font</td>
+      <td>https://fonts.google.com/specimen/Poppins</td>
+    </tr>
+    <tr>
+      <td align="center">10</td>
+      <td>Lottie React</td>
+      <td>https://www.npmjs.com/package/lottie-react</td>
+    </tr>
+    <tr>
+      <td align="center">11</td>
+      <td>React Toastify</td>
+      <td>https://www.npmjs.com/package/react-toastify</td>
+    </tr>
+    <tr>
+      <td align="center">12</td>
+      <td>React Lazy Load</td>
+      <td>https://github.com/loktar00/react-lazy-load</td>
+    </tr>
+    <tr>
+      <td align="center">13</td>
+      <td>AOS</td>
+      <td>https://www.npmjs.com/package/aos</td>
+    </tr>
+    <tr>
+      <td align="center">14</td>
+      <td>React Tabs</td>
+      <td>https://www.npmjs.com/package/react-tabs</td>
+    </tr>
+    <tr>
+      <td align="center">15</td>
+      <td>SweetAlert2</td>
+      <td>https://sweetalert2.github.io/</td>
+    </tr>
+    <tr>
+      <td align="center">16</td>
+      <td>React Responsive Carousel</td>
+      <td>https://github.com/leandrowd/react-responsive-carousel</td>
+    </tr>
+    <!-- <tr>
+      <td align="center">12</td>
+      <td>NAME</td>
+      <td>LINK</td>
+    </tr> -->
+  </tbody>
+</table>

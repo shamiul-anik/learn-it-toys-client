@@ -250,6 +250,36 @@
   backdrop-filter: blur(2px);
 }
 
+/* Tab Section Design Update */
+.react-tabs__tab-list {
+  display: flex !important;
+  justify-content: center;
+  gap: 8px !important;
+  border-bottom: none !important;
+  text-align: center !important;
+}
+
+.react-tabs__tab {
+  padding: 12px 20px !important;
+  min-width: 180px !important;
+  background: #dedede !important;
+  border-color: #dedede !important;
+  /* color: white !important; */
+  border-radius: 5px !important;
+}
+
+.react-tabs__tab--selected {
+  background: #276ef4 !important;
+  border-color: #276ef4 !important;
+  color: white !important;
+  /* min-width: 160px; */
+}
+
+/* React Responsive Carousel Design Update */
+.carousel {
+  justify-content: center;
+}
+
 
 
 /* Responsive Design */
@@ -284,5 +314,10 @@
   .question-img > img {
     height: 200px;
     object-position: right;
+  }
+
+  /* Tab Section Design Update */
+  .react-tabs__tab-list {
+    flex-direction: column !important;
   }
 }

@@ -77,7 +77,7 @@ const ViewToy = () => {
                 <label className="label pl-0" htmlFor="price">
                   <span className="label-text text-lg md:text-xl font-semibold">Price</span>
                 </label>
-                <p className='text-lg text-slate-500 mb-2'>{price}</p>
+                <p className='text-lg text-slate-500 mb-2'>${price}</p>
               </div>
 
               <div className="form-control">

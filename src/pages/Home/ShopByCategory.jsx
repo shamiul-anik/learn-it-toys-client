@@ -1,37 +1,32 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import { useEffect, useState } from "react";
 import LanguageToys from "./LanguageToys";
 import MathToys from './MathToys';
 import ScienceToys from './ScienceToys';
+import 'react-tabs/style/react-tabs.css';
 
 
 const ShopByCategory = () => {
 
   const [allToys, setAllToys] = useState([]);
-
   const [tabIndex, setTabIndex] = useState(0);
+  const [indexValue, setIndexValue] = useState(0);
 
   useEffect(() => {
-    fetch('https://learn-it-toys-server.vercel.app/toys')
-    .then(res => res.json())
-    .then(data => {
-      if(tabIndex == 0) {
-        const getLanguageData = data.filter(toy => toy.sub_category === "Language Toys");
-        setAllToys(getLanguageData);
-      }
-      if(tabIndex == 1) {
-        const getMathData = data.filter(toy => toy.sub_category === "Math Toys");
-        setAllToys(getMathData);
-      }
-      if(tabIndex == 2) {
-        const getScienceData = data.filter(toy => toy.sub_category === "Science Toys");
-        setAllToys(getScienceData);
-      }
-      
+    // fetch(`https://learn-it-toys-server.vercel.app/toys/${index}`)
+    fetch(`https://learn-it-toys-server.vercel.app/sub-categories?tabIndex=${indexValue+1}`)
+      .then(res => res.json())
+      .then(data => {
+        setAllToys(data);
+        setTabIndex(indexValue);
+        console.log(data);
+      })
+  }, [indexValue]);
 
-    })
-  }, [tabIndex]);
+  const handleTabSelect = (index) => {
+    setIndexValue(index);
+  };
+  
 
   
   return (
@@ -46,38 +41,38 @@ const ShopByCategory = () => {
         </p>
       </div>
 
-      <section className="max-w-7xl p-4 mt-4 md:mt-12 mx-auto border-2 border-slate-200 rounded-xl">
+      <section className="max-w-7xl min-h-[620px] p-4 mt-4 md:mt-8 mx-auto">
+        <div className='p-4 md:p-8 border-2 border-slate-200 rounded-xl'>
+          <Tabs selectedIndex={tabIndex} onSelect={handleTabSelect}>
+            <TabList>
+              <Tab>Language Toys</Tab>
+              <Tab>Math Toys</Tab>
+              <Tab>Science Toys</Tab>
+            </TabList>
 
-        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-          <TabList>
-            <Tab>Language Toys</Tab>
-            <Tab>Math Toys</Tab>
-            <Tab>Science Toys</Tab>
-          </TabList>
-
-          <TabPanel>
-            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
-              {
-                allToys.map((toyData) => <LanguageToys key={toyData._id} toyData={toyData}></LanguageToys>)
-              }
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
-              {
-                allToys.map((toyData) => <MathToys key={toyData._id} toyData={toyData}></MathToys>)
-              }
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
-              {
-                allToys.map((toyData) => <ScienceToys key={toyData._id} toyData={toyData}></ScienceToys>)
-              }
-            </div>
-          </TabPanel>
-        </Tabs>
-
+            <TabPanel>
+              <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+                {
+                  allToys.map((toyData) => <LanguageToys key={toyData._id} toyData={toyData}></LanguageToys>)
+                }
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+                {
+                  allToys.map((toyData) => <MathToys key={toyData._id} toyData={toyData}></MathToys>)
+                }
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mx-2 mb-2">
+                {
+                  allToys.map((toyData) => <ScienceToys key={toyData._id} toyData={toyData}></ScienceToys>)
+                }
+              </div>
+            </TabPanel>
+          </Tabs>
+        </div>
     </section>
 
     </div>

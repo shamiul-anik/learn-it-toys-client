@@ -1,4 +1,5 @@
 import { Carousel } from "flowbite-react";
+// import { Carousel } from 'react-responsive-carousel';
 
 const Gallery = () => {
   return (
@@ -12,24 +13,43 @@ const Gallery = () => {
         </p>
 
         <div className="h-56 md:h-80 xl:h-[450px]">
+          {/* Flowbite React - Carousel */}
           <Carousel slideInterval={3000}>
-            <img
+            <img className="h-full object-cover"
               src="https://i.ibb.co/zXFnRd7/gallery-image1.jpg"
               alt="Gallery Image 1"
             />
-            <img
+            <img className="h-full object-cover"
               src="https://i.ibb.co/mCHYPyB/gallery-image2.jpg"
               alt="Gallery Image 2"
             />
-            <img
+            <img className="h-full object-cover"
               src="https://i.ibb.co/NYsJLdh/gallery-image3.webp"
               alt="Gallery Image 3"
             />
-            <img
+            <img className="h-full object-cover"
               src="https://i.ibb.co/Q9VQmSL/gallery-image4.webp"
               alt="Gallery Image 4"
             />
           </Carousel>
+
+          {/* React Responsive Carousel */}
+          {/* <Carousel className="text-center" showArrows={true} autoPlay={true} infiniteLoop={true}>
+            <div>
+              <img src="https://i.ibb.co/zXFnRd7/gallery-image1.jpg" alt="Gallery Image 1" />
+            </div>
+            <div>
+              <img src="https://i.ibb.co/mCHYPyB/gallery-image2.jpg" alt="Gallery Image 2" />
+            </div>
+            <div>
+              <img src="https://i.ibb.co/NYsJLdh/gallery-image3.webp" alt="Gallery Image 3" />
+            </div>
+            <div>
+              <img src="https://i.ibb.co/Q9VQmSL/gallery-image4.webp" alt="Gallery Image 4" />
+            </div>
+          </Carousel> */}
+          {/* <p className="legend">Legend 4</p> */}
+
         </div>
 
 

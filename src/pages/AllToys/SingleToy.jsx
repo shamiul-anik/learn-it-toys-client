@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 
-const MySingleToy = ({ toy }) => {
+const MySingleToy = ({ toy, index }) => {
 
   const { _id, seller_name, toy_name, sub_category, price, quantity } = toy;
 
   return (
     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td className="px-3 py-3 whitespace-nowrap text-center">
+        {index+1}
+      </td>
       <td className="px-3 py-3 whitespace-nowrap">
         {seller_name}
       </td>

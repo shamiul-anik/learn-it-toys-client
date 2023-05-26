@@ -7,6 +7,7 @@ import AuthProvider from './providers/AuthProvider.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 import '@smastrom/react-rating/style.css';
 import './index.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

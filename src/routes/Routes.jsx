@@ -32,7 +32,6 @@ export const router = createBrowserRouter([
 			{
 				path: "/all-toys",
 				element: <Suspense fallback={<Loader></Loader>}><AllToys></AllToys></Suspense>,
-				// loader: () => fetch("https://learn-it-toys-server.vercel.app/toys")
 			},
 			{
 				path: "/my-toys",
