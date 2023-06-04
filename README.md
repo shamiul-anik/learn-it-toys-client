@@ -143,11 +143,11 @@ https://learn-it-toys-server.vercel.app/toy/id
       <td>SweetAlert2</td>
       <td>https://sweetalert2.github.io/</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td align="center">16</td>
       <td>React Responsive Carousel</td>
       <td>https://github.com/leandrowd/react-responsive-carousel</td>
-    </tr>
+    </tr> -->
     <!-- <tr>
       <td align="center">12</td>
       <td>NAME</td>
