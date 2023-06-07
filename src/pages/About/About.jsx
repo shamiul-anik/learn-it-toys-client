@@ -48,7 +48,7 @@ const About = () => {
 					</p>
 				</div>
 				<div className="grid md:grid-cols-5 gap-2 md:gap-4 items-center mb-4">
-					<Accordion className='col-span-3 max-w-7xl mx-auto mb-4 md:mb-8 border-2 border-slate-200'>
+					<Accordion className='col-span-3 w-full max-w-7xl mx-auto mb-4 md:mb-8 border-2 border-slate-200'>
 						<Accordion.Panel>
 							<Accordion.Title>
 								Are the toys at LearnitToys safe for children?
